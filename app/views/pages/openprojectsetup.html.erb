@@ -1,0 +1,61 @@
+<% content_for :title do %>Setup Openproject<% end %>
+<h1><i class="glyphicon glyphicon-check"></i>Setup a Project</h1>
+<p>
+<%= link_to image_tag("projmgt4.png",:size => '250x120', alt: "Project Mgt"  ), page_path('projmgt'),class: 'pull-left' %>        	
+
+		<p> The following documents an approach to setting up a project in OpenProject for use in small and medium business. 
+			It shows how to get the projects defined in Openproject and then how to track the project in a simple way that 
+			does not consume too many company resources yet enables the team to stay on top of what is happening and is integrated into normal operational processes. </p> 
+		<p> I will assume that we are going to run to small projects that are related. We will define a simple waterfall set of 
+			plans for each and we will track hours as a well as tasks during the run phases of the projects and store the main project documents.
+			The project will run in the context of IT operations and is not viewed as a standalone piece of work. 
+			Below shows this simple approach to project management.
+			</p>
+        							 		
+		<hr /><%= link_to image_tag("openproject/opprocess1.png",:size => '450x500', alt: "Project Mgt"  ), class: 'centre' %> 
+		
+
+<p>The advantages from small enterprises are</p> 
+
+			<ul>
+				<li>A simple cost effective way to manage projects</li> 
+				<ul>
+					<li>Openproject server takes a small effort to setup (half a day)</li>
+					<li>The running costs are low, just the server costs only, no application costs.</li>
+					<li>Openproject uses a simple backlog and task board approach to generating the plan</li>
+					<li>Openproject provides a simple web based project update mechanism for team members.</li>
+					<li>Openproject has simple effective effort and management reporting out of the box</li>
+					<li>Allows for third parties to be tracked easily as well</li> 
+					<li>Will give back time to IT managers to concentrate on the business</li> 
+				</ul>
+				<li>The company can use more functionality as the use of management disciplines mature.</li>
+				<li>Can be used within the company as much as in IT</li> 							
+			</ul>
+
+<h4>OpenProject Installation </h4>
+
+ <p> Installation of OpenProject is straight forward. It can be run on a small server in the cloud, such as an Amazon EC2 server, for little cost 
+or run as a virtual server on any local platform you may have setup.
+An Installation guide can be <%= link_to 'found here', page_path('openprojectinstallation')  %> or more documentation on the offical  
+<%= link_to 'OpenProject web site', 'http:\\openproject.org'  %>. Just use the search functionality to find what you want. 
+It will take an average linux administrator about 90 minutes to install </p>
+
+
+<h4>OpenProject Configuration </h4>
+
+ <p>The initial <%= link_to 'configuration of OpenProject', page_path('openprojectconfiguration')  %> will take about an hour. 
+ 	Once configured, you can then use OpenProject to run as many projects as you have a need.
+ 	The configuration is flexible and you can change it as you become more familar with the functionality of the application. 
+ 	This <%= link_to ' guide', page_path('openprojectconfiguration') %> is just a suggested approach and you may choose to experiment and setup differently.
+ 	
+ 	is straight forward. It can be run on a small server in the cloud, such as an Amazon EC2 server, for little cost 
+or run as a virtual server on any local platform you may have setup.
+An Installation guide can be <%= link_to 'found here', page_path('openprojectinstallation')  %> or more documentation on the offical  
+<%= link_to 'OpenProject web site', 'http:\\openproject.org'  %>. Just use the search functionality to find what you want. 
+It will take an average linux administrator about 90 minutes to install </p>
+
+
+
+
+
+

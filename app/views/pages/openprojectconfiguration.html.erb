@@ -1,0 +1,245 @@
+<% content_for :title do %>Openproject Configuration<% end %>
+<h1><i class="glyphicon glyphicon-check"></i>OpenProject Configuration Guide</h1>
+<p>
+<%= link_to image_tag("projmgt4.png",:size => '250x120', alt: "Project Mgt"  ), page_path('projmgt'),class: 'pull-left' %>        	
+
+		<p> The following documents an approach to configuring OpenProject for basic use in small and medium business. 
+			It shows how to get the base install ready for use as a projet management server and also as a daily operational management server
+			if you want to expand its operation. </p> 
+			
+		<p> I will assume that we are going to run to small projects that are related. We will define a simple waterfall set of 
+			plans for each and we will track hours as a well as tasks during the run phases of the projects and store the main project documents.
+			The project will run in the context of IT operations and is not viewed as a standalone piece of work. 
+			Below shows this simple approach to project management.
+			</p>
+        							 		
+		<hr /><%= link_to image_tag("openproject/opprocess1.png",:size => '450x500', alt: "Project Mgt"  ), class: 'centre' %> 
+		
+
+<h2>Configuration </h2>
+
+<h3> Configuring the Plugins </h3>
+
+			<ul>
+				<li>Using a web browser, open the project server on your local host or go the servers IP address if you are using Amazon or some other service provider</li> 
+				<li>Login as admin pwd admin</li>
+				<li>Open the Administration Module</li> 
+				<li>Go to the plugin page at the bottom of the menu.</li>							
+			</ul>
+
+
+
+
+<h5>Configure the Help link	</h5>
+<p> Accept the default. We will not be using this module.</p>
+<h5>Configure the Costs Plugin</h5>
+<p>Accept the default. We will not be using this module.</p>
+<h5>Configure the backlog Plugin</h5>
+<p>You access the configuration screen as below</p>
+<%= link_to image_tag("openproject/plugin1.png",:size => '450x500', alt: "Project Mgt"  ), class: 'centre' %> 
+
+<p>Use the shift button to select the group of project types that can be used in the initial story process. 
+	Use none, bug, feature and support and “phase” as the task type. Do not enter a sprint wiki template name.</p>
+	
+<%= link_to image_tag("openproject/backlog1.png",:size => '450x500', alt: "Project Mgt"  ), class: 'centre' %>
+
+
+<p>Press “apply” to save the choice you have made.</p>
+
+<h5>Updating Roles and Permissions</h5>
+
+<p>Add all the roles used in your department that are important. The roles should cover the spectrum of IT services
+	and project management as well as key business roles.
+	</p>
+	<p>A suggested set of roles to choose from</p>
+			<ul>
+				<li>IT Roles</li>
+				<ul>
+					<li>IT Manager</li>
+					<li>Project Manager</li>
+					<li>PMO</li>
+					<li>System Administrator</li>
+					<li>DBA</li>
+					<li>Network</li>
+					<li>Help Desk</li>
+					<li>Application Administrator</li>
+					<li>Tester</li>
+					<li>Developer</li>
+					<li>Consultant</li>
+					<li>Vendor</li>
+					<li>Business Analyst</li>
+					<li>Service Manager</li>
+				</ul>
+				<li>Business Roles</li>
+				<ul>
+					<li>HR</li>
+					<li>Payroll</li>
+					<li>Operation Manager</li>
+					<li>Sales Manager</li>	
+					<li>Business SME</li>
+					<li>Business Manager</li>
+					<li>Service Manager</li>
+					<li>Finance</li>
+				</ul>				
+			</ul>	
+	<p>
+	You would add roles as best fits your company, the aim is the be able to break down the work to better identify workload
+	and possible opportunities for improvement. If the roles are too high level, then no insight is gained, too low level and the 
+	employees spend too much time recording effort which will have an effectt on efficiency and possibly morale.
+	 Roles are not the employees, 
+	so there is not a one to one relationship, e.g. you may have an sme role and 3 people in that role. 
+	Typically in a small company many people will be multi-tasking, so some employees will cover a couple of roles in IT. 
+	</p>
+<%= link_to image_tag("openproject/roles1.png",:size => '450x500', alt: "Project Mgt"  ), class: 'centre' %>
+
+
+<h5> Adding a New Role</h5>
+
+<p>Once you have a list of roles you want to use in your projects, click the "newuser" on the right</p>
+
+<%= link_to image_tag("openproject/roles2.png",:size => '450x500', alt: "Project Mgt"  ), class: 'centre' %>
+
+<p>
+I am going to copy another roles workflow as I add the roles
+It is important that you set up workflow as this will have a large effect on how OpenProject works. 
+For example, you may have a testing role. You may not allow the tester to create new tasks but you may 
+allow them to change task from “in progress” to “feedback” or “rejected”. It will depend on the project framework 
+you have setup in your company. You will also have to set up the permissions for all the new plugins for all 
+the current default roles as well in this page.</p>
+
+<%= link_to image_tag("openproject/roles3.png",:size => '450x500', alt: "Project Mgt"  ), class: 'centre' %>
+
+
+
+<h5>Workflow</h5>
+<p>
+You do not have to change the default workflows. When you set up the new roles you copied current workflows. 
+If you look at the developer workflow (press edit after you have selected the developer). 
+You can see they have limited workflow, but it allows them to make comments and log their effort to the tasks that are assigned to them.
+</p>
+
+<%= link_to image_tag("openproject/workflow1.png",:size => '450x500', alt: "Project Mgt"  ), class: 'centre' %>
+<p>Whereas the manager can control all the work packages and their status.</p>
+<%= link_to image_tag("openproject/workflow2.png",:size => '450x500', alt: "Project Mgt"  ), class: 'centre' %>
+
+<h5>Project Types</h5>
+<p>
+No Change to “Bug, “Feature”, “Support”, “Milestone” and “Phase”. 
+If you decide to change these, then you will also have to reconfigure the roles and workflows, which is a large task, so not recommended.
+</p>
+<%= link_to image_tag("openproject/types1.png",:size => '450x500', alt: "Project Mgt"  ), class: 'centre' %>
+<h5>Work Package Status</h5>
+<p>
+No Change to the defaults. If you change these, then you will have to revisit your 
+Roles and Permissions and your workflow to enable the new status to function inside the application.
+</p>
+<%= link_to image_tag("openproject/workpackage1.png",:size => '450x500', alt: "Project Mgt"  ), class: 'centre' %>
+
+<h5>Custom Fields</h5>
+<p>Custom fields are not required for a simple implementation. If you integrate into your companies systems, 
+	then you can use custom fields to match data, automate some reporting etc as well as track items that the business is specifically interested in.
+</p>
+
+<%= link_to image_tag("openproject/customfields1.png",:size => '450x500', alt: "Project Mgt"  ), class: 'centre' %>
+
+<h5>Enumerations</h5>
+
+<p> You will need to add time tracking categories and documentation categories in your initial setup. 
+	Reported project status is not requried for simple projects and the work packages categories are ok</p>
+	
+	<p>A suggested set of time categories to measure</p>
+			<ul>
+				<li>IT Roles</li>
+				<ul>
+					<li>Reporting</li>
+					<li>Planning</li>
+					<li>Managing</li>
+					<li>Training</li>
+					<li>Development</li>
+					<li>Installation</li>
+					<li>Administration</li>
+					<li>Change Management</li>
+					<li>Documenting</li>
+					<li>Testing</li>
+					<li>Communication</li>
+					<li>Designing</li>
+					<li>Incident Management</li>
+					<li>Request Management</li>
+					<li>Vendor Management</li>
+				</ul>
+				<li>Business Roles</li>
+				<ul>
+					<li>SME - requirements</li>
+					<li>SME - Testing</li>
+					<li>IT Review</li>
+					<li>Analysis</li>
+					<li>Contract Management</li>
+
+				</ul>				
+			</ul>	
+<%= link_to image_tag("openproject/enumerations.png",:size => '450x500', alt: "Project Mgt"  ), class: 'centre' %>	
+
+<p>It is also a good practice to maintain a project library. You can even leverage this for your whole IT department. The 
+	following is a set of suggested document categories</p>
+<ul>
+	<li>Design</li>
+	<li>Process</li>
+	<li>Reports</li>
+	<li>Finance</li>
+	<li>Workshop</li>
+	<li>Vendor</li>
+	<li>Change</li>
+	<li>Organisation</li>
+	<li>Communication</li>
+	<li>Requirements</li>
+</ul>
+
+<h5>OpenProject Settings</h5>
+<p>OpenProject has 10 general settings tabs that need review. Select the "Settings" option in the left menu</p>
+
+<%= link_to image_tag("openproject/settings1.png",:size => '450x500', alt: "Project Mgt"  ), class: 'centre' %>
+<p>As you can see you have the option to update the general settings, Display, Authentication, Users, Projects, 
+	Work Package Tracking, Email Notification, Incoming Emails and Repositories.</p>
+
+<h5>Updating the General settings	</h5>
+
+<p>You do not have to change any of the defaults. You did add a small greeting to my Welcome text and put in the real ip 
+	address of the server (you would use a server name if your admins have set up the DNS or hosts file). </p>
+	
+	
+<h5>Updating Display</h5>
+<p> Allow the use of icons to brighten up your site </p>
+<%= link_to image_tag("openproject/displaysettings1.png",:size => '450x500', alt: "Project Mgt"  ), class: 'centre' %>
+<p>Do not forget to press save after you have made changes in a screen.</p>
+	
+<h5>Updating Authentication</h5>	
+<p>Keep the defaults</p>	
+<%= link_to image_tag("openproject/authenticationsettings.png",:size => '450x500', alt: "Project Mgt"  ), class: 'centre' %>
+	
+<h5>Updating User General Settings</h5>	
+<p>Keep the defaults</p>	
+<%= link_to image_tag("openproject/usersettings1.png",:size => '450x500', alt: "user settings"  ), class: 'centre' %>
+
+<h5>Updating Project Settings</h5>	
+<p>Update the plugins and add roles that can create projects for example allow the PMO to create new projects</p>	
+<%= link_to image_tag("openproject/projectsettings1.png",:size => '450x500', alt: "user settings"  ), class: 'centre' %>
+
+<h5>Work Package Tracking Settings</h5>	
+<p>TThis is where you add fields to your work package tracking screens. It is to see % done and remaining hours, so tick those options
+	and make “Remaining Hours” summable  (tick the second column). You will also the see the custom fields here if you added any.</p>	
+<%= link_to image_tag("openproject/workpackagetracking.png",:size => '450x500', alt: "user settings"  ), class: 'centre' %>
+
+
+<h5>Email Notification Settings</h5>	
+<p>Keep the defaults</p>	
+<%= link_to image_tag("openproject/emailnotifications.png",:size => '450x500', alt: "user settings"  ), class: 'centre' %>
+
+
+
+
+
+
+	
+		
+	
+	
