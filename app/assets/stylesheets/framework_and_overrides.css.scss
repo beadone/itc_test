@@ -1,7 +1,10 @@
 // import the CSS framework
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+$grayMediumLight: #eaeaea;
+$grayLight: #d399e3;
+$gray: #ae99e3;
+$grayDarker: #7d3ea4;
 // make all images responsive by default
 img {
   @extend .img-responsive;
@@ -12,9 +15,17 @@ img {
   font-size: inherit;
   }
 
+/*.carousel .container { */
+.carousel {
+  background-image: url("bck2.png") ;
+/*  background-color: red; */
+}
+
+
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create your own classes
 // to make views framework-neutral
+/*
 .column {
   @extend .col-md-6;
   @extend .text-center;
@@ -31,12 +42,15 @@ img {
   @extend .btn-primary;
   @extend .btn-lg;
   }
+  
+  */
+ 
 // apply styles to HTML elements
 // to make views framework-neutral
 main {
   @extend .container;
-  background-color: #eee;
-  padding-bottom: 80px;
+  background-color: $grayMediumLight;
+  padding-bottom: 40px;
   width: 100%;
   margin-top: 51px; // accommodate the navbar
   }
@@ -44,3 +58,114 @@ section {
   @extend .row;
   margin-top: 20px;
   }
+
+// pad the paragraphs in the rows
+    .padp {
+      p {
+            margin-left: 50px;
+            padding-left: 10px;
+      }
+    }
+
+/* pad the footer glyphicons*/
+
+/* footer */
+
+footer {
+  margin-top: 1px;
+  padding-top: 10px;
+  border-top: 2px solid $grayMediumLight; 
+  color: $grayLight;
+   background-color: $grayMediumLight;
+  a {
+    color: $gray;
+    &:hover {
+      color: $grayDarker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 5px;
+    }
+  }
+
+}
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: $grayDarker;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+    padding-right: 9px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color:  $gray;
+    text-decoration: none;
+  }
+}
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+    padding-left: 9px;
+  text-align: center;
+        i {
+/*      float: left; */
+      margin-right: 5px;
+  }
+}
+
+
+h2 {
+ /* font-size: 1.2em;*/
+/*  letter-spacing: -1px;*/
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+/*  color: $grayLight; */
+}
+.center {
+  text-align: center;
+  h1 {
+    padding-top: 9px;
+    margin-bottom: 10px;
+  }
+}
+/* for the input form, uses css not bootstrap classes */
+
+/* enable absolute positioning */
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }

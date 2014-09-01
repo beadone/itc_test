@@ -1,0 +1,19 @@
+<footer class="footer"> 
+  	 <div class="container" >		 
+	 	<%= link_to image_tag("beachsmall1.png", alt: "Footer"), 'http://ec2-54-79-116-161.ap-southeast-2.compute.amazonaws.com/' %> 
+     </div>
+  <nav>
+        <ul class="nav navbar-nav">
+<li><%= link_to 'About', page_path('about'),class: 'glyphicon glyphicon-book' %></li>
+<li><%= link_to 'Contact', page_path('contact'),class: 'glyphicon glyphicon-comment' %></li>
+<li><%= link_to 'OpenProject', 'http://Openproject.org/',class: 'glyphicon glyphicon-road' %></li>
+    </ul>
+
+    
+       <p class="navbar-text navbar-right">
+       	<%= link_to 'Dunn ITC', 'http://ec2-54-79-116-161.ap-southeast-2.compute.amazonaws.com/',class: 'navbar-link' %>
+
+          &copy Brendan Dunn
+      </p>
+  </nav>  
+</footer>

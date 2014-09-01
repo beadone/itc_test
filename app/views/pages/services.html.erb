@@ -1,0 +1,91 @@
+<% content_for :title do %>Services<% end %>
+<h1><i class="glyphicon glyphicon-briefcase"></i>Services</h1>
+<div class="container">
+<div id="carousel-services" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-services" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-services" data-slide-to="1"></li>
+    <li data-target="#carousel-services" data-slide-to="2"></li>
+  </ol>
+ 
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+ 	<%= link_to image_tag("mouse1200x315.png", alt: "pc mouse pic"), '#' %> 
+      <div class="carousel-caption">
+      	<h3>IT Project Management</h3>
+        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget.</p>
+      	<%= link_to 'Learn More', page_path('projmgt'),class: 'btn btn-large btn-primary'   %>  
+      </div>
+    </div>
+    <div class="item">
+    	<%= link_to image_tag("logo11200x315.png", alt: "dunn itc logo"), '#' %> 
+      <div class="carousel-caption">
+      	<h3>IT Business Operations</h3>
+      	<p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget.</p>
+      	<%= link_to 'Learn More', page_path('bizops'),class: 'btn btn-large btn-primary'   %>  
+      </div>
+    </div>
+    <div class="item">
+       	<%= link_to image_tag("opscycle21200x315.png", alt: "ops cycle"), '#' %>      
+      <div class="carousel-caption">
+        <h3> IT Operations Management</h3>
+      	<p class="lead">If you are a small to medium sized IT Orgainization and want to implement a service management process and 
+      		culture without incurring large costs ?</p>
+      <!--	<a class="btn btn-large btn-primary" href="#">Learn more</a> -->
+      	<%= link_to 'Learn More', page_path('opsmgt'),class: 'btn btn-large btn-primary'   %>  
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-services" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-services" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div> <!-- Carousel -->
+
+<hr>
+
+      <div class="row">
+        <div class="col-sm-4"><h4> IT Project and Program Management</h4>
+				<%= link_to image_tag("plansymbol.png",:size => '50x50', alt: "Rails"  ), page_path('projmgt'),class: 'pull-left' %>        	
+        	<div class="padp">
+        		<p> words here
+        			
+        		</p>
+        	</div> <!-- padp -->        	
+        </div> <!-- column1 -->
+        <div class="col-sm-4"><h4> IT Operations Management</h4>
+				<%= link_to image_tag("buildsymbol.png", :size => '50x50',alt: "Rails" ), page_path('opsmgt'),class: 'pull-left'  %>        	
+        	<div class="padp">        	
+        	
+        	<p> words here</p>
+        	</div> <!-- padp -->        	
+        </div><!-- column2 -->
+        <div class="col-sm-4"><h4> IT Business Management</h4>
+			<%= link_to image_tag("discoversymbol.png", :size => '50x50',alt: "Rails"), page_path('bizops'),class: 'pull-left' %>        	
+        	<div class="padp">
+        		<p> words here
+        			        			
+        			</p> 
+	
+        	</div> <!-- padp -->
+        	
+        	
+        </div><!-- column3 -->
+      </div><!-- Row1 -->
+
+      <hr>
+
+
+</div> <!-- container -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+$('#carousel-services').carousel({interval: 3000});
+});
+</script>
