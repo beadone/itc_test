@@ -1,6 +1,6 @@
 <% content_for :title do %>Openproject Configuration<% end %>
 <h1><i class="glyphicon glyphicon-check"></i>OpenProject Configuration Guide</h1>
-<p>
+<div class='container'> </div>
 <%= link_to image_tag("projmgt4.png",:size => '250x120', alt: "Project Mgt"  ), page_path('projmgt'),class: 'pull-left' %>        	
 
 		<p> The following documents an approach to configuring OpenProject for basic use in small and medium business. 
@@ -234,12 +234,165 @@ Roles and Permissions and your workflow to enable the new status to function ins
 <p>Keep the defaults</p>	
 <%= link_to image_tag("openproject/emailnotifications.png",:size => '450x500', alt: "user settings"  ), class: 'centre' %>
 
+<h5>Incoming Email Settings</h5>	
+<p>Keep the defaults</p>	
+<%= link_to image_tag("openproject/incomingemailsettings.png",:size => '450x500', alt: "user settings"  ), class: 'centre' %>
 
 
+<h5>Repository Settings</h5>	
+<p>To keep things simple, you can skip setting up the repositories and use your current practices, but you can see that integration
+	at sometime would be a good option. It will streamline development and maintain quality.</p>
+	<p> Select the options the "enable time logging" and pick a default activity for logged time at the bottom of the screen</p>	
+<%= link_to image_tag("openproject/repositorysettings.png",:size => '450x500', alt: "user settings"  ), class: 'centre' %>
+
+<h5>LDAP Auhentication Settings</h5>	
+<p>To keep the configuration simple, keep the defaults for now unless you are confident that you can integrate into your local activity directory easily.</p>	
+<%= link_to image_tag("openproject/ldapsettings.png",:size => '450x500', alt: "user settings"  ), class: 'centre' %>
 
 
+<h5>Colour Settings</h5>	
+<p>Keep the defaults</p>	
+<%= link_to image_tag("openproject/coloursettings.png",:size => '450x500', alt: "user settings"  ), class: 'centre' %>
+<p>
+If you click on a colour you can edit its name and the colour. You might like to set up a new pastel set.
+You will have to know the hex code for the colour. There are plenty of web pages which can provide this information for you if you have the RGB numbers.</p>
+<%= link_to image_tag("openproject/coloursettings2.png",:size => '450x500', alt: "user settings"  ), class: 'centre' %>
 
+
+<h5>Project Type Settings</h5>	
+<p>This is where the standard project types are defined. You may define as little or as many as you need, 
+	but generally more than 10 types would not provide any further management insight </p>
+	<%= link_to image_tag("openproject/projecttypes1.png",:size => '450x500', alt: "user settings"  ), class: 'centre' %>
+	<p> Suggested Project types are</p>
+	<ul>
+		<li>IT Centric</li>
+		<ul>
+			<li>Infrastructure Upgrade</li>
+			<li>Software Development</li>
+			<li>Transformation</li>
+			<li>Application Upgrade</li>
+			<li>Desktop Upgrade</li>
+		</ul>
+		<li>Business Centric</li>
+		<ul>
+			<li>Product Development</li>
+			<li>Product Roll Out</li>
+			<li>Marketing Campaign</li>
+			<li>Line Upgrade</li>
+		</ul>
+	</ul>
+<p>When you add new project types, you will also be able to add any new reporting plugin status. This guide recommended that you
+	do not add any new reporting status in the first run of the application, but if you did, you should add them to your project types</p>		
+<%= link_to image_tag("openproject/projecttypes2.png",:size => '450x500', alt: "user settings"  ), class: 'centre' %>
+
+
+<h5>Export Card Configuration</h5>	
+<p>The export card option is a plugin that allows you to export the backlog tasks. This allows you to run workshops using the 
+	current set of stories. It works using a configurable template written in a markup language called YAML.
+	We will modify the suggested example from the authors by adding the subject to the card in the first row.
+	<%= link_to 'web site',' https://github.com/finnlabs/openproject-pdf_export' %></p>	
+<%= link_to image_tag("openproject/exportconfig1.png",:size => '450x500', alt: "user settings"  ), class: 'centre' %>
+<p>Select "New Export Card Config" and paste the YAML code below into the page. Give your configuration a name and set number per page to 1.</p>
 	
-		
+<pre>
+group1:
+  has_border: false
+  height: 200
+  rows:
+group1:
+  has_border: false
+  height: 200
+  rows:
+    row1:
+      height: 50
+      priority: 1
+      columns:
+        id:
+          has_label: false
+          min_font_size: 10
+          max_font_size: 20
+          font_size: 20
+          font_style: bold
+          text_align: left
+          minimum_lines: 2
+          render_if_empty: false
+          width: 10%
+        subject:
+          has_label: false
+          font_size: 15
+          font_style: italic
+          minimum_lines: 2
+          render_if_empty: false
+          width: 50%
+        due_date:
+          has_label: false
+          font_size: 15
+          font_style: italic
+          minimum_lines: 2
+          render_if_empty: false
+          width: 40%
+    row2:
+      priority: 2
+      columns:
+        status:
+          has_label: true
+          indented: true
+          font_size: 15
+          font_style: normal
+          minimum_lines: 1
+          render_if_empty: true
+group2:
+  has_border: true
+  rows:
+    row1:
+      height: 80
+      priority: 2
+      columns:
+        description:
+          has_label: true
+          indented: false
+          font_size: 15
+          font_style: normal
+          minimum_lines: 1
+          render_if_empty: true
+    row2:
+      priority: 2
+      columns:
+        status:
+          has_label: true
+          font_size: 15
+          font_style: normal
+          minimum_lines: 1
+          render_if_empty: true
+    row2:
+      priority: 2
+      columns:
+        custom_field_name:
+          has_label: true
+          font_size: 15
+          minimum_lines: 1
+group3:
+  rows:
+    row1:
+      priority: 2
+      columns:
+        children:
+          has_label: true
+          has_count: true
+          indented: true
+          font_size: 15
+          font_style: normal
+          minimum_lines: 1
+          render_if_empty: true
+</pre>
+
+
+
+<p>It will look like this</p>	
+<%= link_to image_tag("openproject/exportconfig2.png",:size => '450x500', alt: "user settings"  ), class: 'centre' %>		
 	
-	
+<hr />
+<p>You are now ready to add the team and create your projects. 
+      	<%= link_to 'Click here', page_path('openprojectsetup'),class: 'btn btn-large btn-primary'   %> to start that process  </p>
+      	
+      </div> <!-- container -->

@@ -5,6 +5,14 @@ $grayMediumLight: #eaeaea;
 $grayLight: #d399e3;
 $gray: #ae99e3;
 $grayDarker: #7d3ea4;
+$mediumblue: #4399AF;
+$mediumbluelighter: #0e99f4;
+$yellowlighter:#e8ed55;
+$mustardgreen:#cbc514;
+$limelighter:#c7ed55;
+$limedarker:#b1bb46;
+
+
 // make all images responsive by default
 img {
   @extend .img-responsive;
@@ -19,7 +27,62 @@ img {
 .carousel {
   background-image: url("bck2.png") ;
 /*  background-color: red; */
+}/* The background image and slide show does work while the fade is turned on */
+
+
+.carousel-fade {
+  .carousel-inner {
+    .item {
+      opacity: 0;
+      transition-property: opacity;
+    }
+
+    .active {
+      opacity: 1;
+    }
+
+    .active.left,
+    .active.right {
+      left: 0;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .next.left,
+    .prev.right {
+      opacity: 1;
+    }
+  }
+
+  .carousel-control {
+    z-index: 2;
+  }
 }
+
+
+
+html, 
+body, 
+.carousel, 
+.carousel-inner, 
+.carousel-inner .item {
+  height: 100%;
+}
+
+.item:nth-child(1) {
+  background: darkred;
+}
+
+.item:nth-child(2) {
+  background: $mustardgreen;
+}
+
+.item:nth-child(3) {
+  background: $mediumblue;
+}
+
+
+
 
 
 // THESE ARE EXAMPLES YOU CAN MODIFY
