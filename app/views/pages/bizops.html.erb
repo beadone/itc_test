@@ -1,11 +1,264 @@
-<% content_for :title do %>Business Operations<% end %>
-<h1><i class="glyphicon glyphicon-info-sign"></i>IT Business Operations</h1>
+<% content_for :title do %>Business Management<% end %>
+<h1><i class="glyphicon glyphicon-info-sign"></i>IT Business Management</h1>
 <p>
-  This is the business operations page for the
-  <a href="http://ec2-54-79-116-161.ap-southeast-2.compute.amazonaws.com/">Dunn ITC</a>
-  web
-   application.
+  Business Management provides the governance functions of the IT organisation and the management interface to the business. 
+  While you will find most elements of Governance in Service Management (ITIL) and in Project Management (PMBOK) and COBIT. 
+  The practical implementation of governance occurs in the Business Management processes and functions.
+  </p>
+  <p>The diagram below illustrates the high level integration of the IT Processes</p>
+  <p>
+		<%= image_tag("SM and proj 2b.png",:size => '450x320', alt: "IT Mgt" ,class: 'pull-left' ) %>	  
 </p>
+
+<p>Business Management revolves around 4 main functions <strong> Planning, Reviewing, Reporting and Risk Management.</strong></p>
+<p> These activities are carried out over <strong> 7 business areas</strong></p>
+
+<div class="opsmgt "> 
+<div class="span">	
+<table class="table table-condensed table-hover">
+ 	<tbody>
+		<tr>
+     		<td>Operational Finance Management (Opex)</td>
+      </tr>
+		<tr>
+     		<td>Capital Finance Management (Capex)</td>
+      </tr>
+      		<tr>
+     		<td>Program Management</td>
+        	</tr>
+      		<tr>
+     		<td>Service Management</td>
+        	</tr>
+      		<tr>
+     		<td>People Management</td>
+        	</tr>
+      		<tr>
+     		<td>Strategy and Planning</td>
+        	</tr>        	        	
+      		<tr>
+     		<td>Partner Management</td>
+        	</tr>        	
+ 	</tbody>    
+</table>  <!-- stripped table -->
+</div>
+</div>
+<p>The table below describes the processes that run across the IT business areas in the 4 function categories.</p>
+
+<div class="row">
+  <div class="col-md-3 "><strong>Business Area</strong></div>
+    <div class="col-md-3 "><strong>Function</strong></div>
+      <div class="col-md-3 "><strong>Activity</strong></div>
+</div> <!--row 1 -->
+<div class="row">
+  <div class="col-md-3 rowborder">Opex</div>
+    <div class="col-md-3 rowborder">Plan</div>
+      <div class="col-md-3 rowborder"><li>Yearly/Quarterly Review</li></div>
+        <div class="col-md-3 col-md-offset-6"><li>Target Setting and Distibution</li></div>
+        <div class="col-md-3 col-md-offset-6 "><li>Productivity/Efficiency Planning</li></div>      
+</div> <!--row 2 -->
+<div class="row">
+  <div class="col-md-3 col-md-offset-3 rowborder">Report</div>
+  <div class="col-md-3 rowborder"><li>Actual to Plan</li></div>
+  <div class="col-md-3 col-md-offset-6  "><li>Productivity/Efficiency Progress</li></div>      
+</div> <!--row  3-->
+
+<div class="row">
+  <div class="col-md-3 col-md-offset-3 rowborder">Review</div>
+  <div class="col-md-3 rowborder"><li>Actual to Plan</li></div>
+  <div class="col-md-3 col-md-offset-6 "><li>Productivity/Efficiency Progress</li></div>
+</div> <!--row 4 -->
+<div class="row">
+  <div class="col-md-3 col-md-offset-3 rowborder">Risk</div>
+  <div class="col-md-3 rowborder"><li>Off Opex Target Remediation </li></div>
+  <div class="col-md-3 col-md-offset-6 "><li>Off Efficiency Target Remediation </li></div>  
+</div> <!--row  5-->
+
+<div class="row">
+  <div class="col-md-3 rowborder">Capex</div>
+    <div class="col-md-3 rowborder">Plan</div>
+      <div class="col-md-3 rowborder"><li>Yearly/Quarterly Review</li></div>
+        <div class="col-md-3 col-md-offset-6"><li>Target Setting</li></div>
+        <div class="col-md-3 col-md-offset-6 "><li>Productivity/Efficiency Planning</li></div>       
+</div> <!--row 6 -->
+<div class="row">
+  <div class="col-md-3 col-md-offset-3 rowborder">Report</div>
+  <div class="col-md-3 rowborder"><li>Actual to Plan</li></div>
+  <div class="col-md-3 col-md-offset-6  "><li>Productivity/Efficiency Progress</li></div>      
+</div> <!--row  3-->
+<div class="row">
+  <div class="col-md-3 col-md-offset-3 rowborder">Review</div>
+  <div class="col-md-3 rowborder"><li>Actual to Plan</li></div>
+  <div class="col-md-3 col-md-offset-6 "><li>Productivity/Efficiency Progress</li></div>
+</div> <!--row 4 -->
+<div class="row">
+  <div class="col-md-3 col-md-offset-3 rowborder">Risk</div>
+  <div class="col-md-3 rowborder"><li>Off Capex Plan Remediation </li></div>
+  <div class="col-md-3 col-md-offset-6 "><li>Off Efficiency Target Remediation </li></div>  
+</div> <!--row  5-->
+
+<div class="row">
+  <div class="col-md-3 rowborder">Program Management</div>
+    <div class="col-md-3 rowborder">Plan</div>
+      <div class="col-md-3 rowborder"><li>High Level Schedule Planning</li></div>
+        <div class="col-md-3 col-md-offset-6"><li>Business Goal Distribution</li></div>
+        <div class="col-md-3 col-md-offset-6 "><li>Program Management Framework</li></div>
+        <div class="col-md-3 col-md-offset-6 "><li>Business Stakeholder Management</li></div>               
+</div> <!--row 2 -->
+<div class="row">
+  <div class="col-md-3 col-md-offset-3 rowborder">Report</div>
+  <div class="col-md-3 rowborder"><li>Actual to Plan Summary</li></div>
+  <div class="col-md-3 col-md-offset-6  "><li>Change Management Summary</li></div>      
+</div> <!--row  3-->
+<div class="row">
+  <div class="col-md-3 col-md-offset-3 rowborder">Review</div>
+  <div class="col-md-3 rowborder"><li>Actual to Plan Summary</li></div>
+  <div class="col-md-3 col-md-offset-6 "><li>Change Management</li></div>
+  <div class="col-md-3 col-md-offset-6 "><li>Project Management Performance</li></div>  
+</div> <!--row 4 -->
+<div class="row">
+  <div class="col-md-3 col-md-offset-3 rowborder">Risk</div>
+  <div class="col-md-3 rowborder"><li>Off Plan Remediation</li></div>
+  <div class="col-md-3 col-md-offset-6 "><li>Business Change Management</li></div>  
+</div> <!--row  5-->
+
+<div class="row">
+  <div class="col-md-3 rowborder">Service Management</div>
+    <div class="col-md-3 rowborder">Plan</div>
+      <div class="col-md-3 rowborder"><li>Business Goal Translation and Distribution</li></div>
+        <div class="col-md-3 col-md-offset-6"><li>Business Capacity Planning Distribution</li></div>
+        <div class="col-md-3 col-md-offset-6 "><li>Stakeholder Management</li></div> 
+        <div class="col-md-3 col-md-offset-6 "><li>Service Level Re-evaluation</li></div>              
+</div> <!--row 2 -->
+<div class="row">
+  <div class="col-md-3 col-md-offset-3 rowborder">Report</div>
+  <div class="col-md-3 rowborder"><li>Service Attainment and Trend</li></div>
+  <div class="col-md-3 col-md-offset-6  "><li>Customer Satisfaction</li></div>      
+</div> <!--row  3-->
+<div class="row">
+  <div class="col-md-3 col-md-offset-3 rowborder">Review</div>
+  <div class="col-md-3 rowborder"><li>Service Attainment and Trend</li></div>
+  <div class="col-md-3 col-md-offset-6 "><li>Customer Satisfaction</li></div>
+  <div class="col-md-3 col-md-offset-6 "><li>Business Change Management</li></div>
+  <div class="col-md-3 col-md-offset-6 "><li>Service Management Performance</li></div>    
+</div> <!--row 4 -->
+<div class="row">
+  <div class="col-md-3 col-md-offset-3 rowborder">Risk</div>
+  <div class="col-md-3 rowborder"><li>Service Level Remediation</li></div>
+  <div class="col-md-3 col-md-offset-6 "><li>Business Capacity Management Review</li></div>  
+</div> <!--row  5-->
+
+<div class="row">
+  <div class="col-md-3 rowborder">People</div>
+    <div class="col-md-3 rowborder">Plan</div>
+      <div class="col-md-3 rowborder"><li>Workload Trends</li></div>
+        <div class="col-md-3 col-md-offset-6"><li>Resource Levels, Placement and Utilisation</li></div>
+        <div class="col-md-3 col-md-offset-6 "><li>Skill Set Requirements</li></div>
+        <div class="col-md-3 col-md-offset-6"><li>Values and Culture</li></div>        
+        <div class="col-md-3 col-md-offset-6"><li>Leadership</li></div> 
+        <div class="col-md-3 col-md-offset-6"><li>Business Goal Translation and Distribution</li></div>        
+        <div class="col-md-3 col-md-offset-6"><li>Employee Engagement</li></div>
+        <div class="col-md-3 col-md-offset-6"><li>Human Resource Enagement</li></div>                             
+</div> <!--row 2 -->
+<div class="row">
+  <div class="col-md-3 col-md-offset-3 rowborder">Report</div>
+  	<div class="col-md-3 rowborder"><li>Resource Capacity and Utilisation</li></div>
+  	<div class="col-md-3 col-md-offset-6  "><li>Skill Sets and Compentancy</li></div>
+    <div class="col-md-3 col-md-offset-6"><li>Employee Engagement</li></div>        
+</div> <!--row  3-->
+<div class="row">
+  <div class="col-md-3 col-md-offset-3 rowborder">Review</div>
+  	<div class="col-md-3 rowborder"><li>Resource Capacity and Utilisation</li></div>
+  	<div class="col-md-3 col-md-offset-6  "><li>Skill Sets and Compentancy</li></div>
+     <div class="col-md-3 col-md-offset-6"><li>Employee Engagement</li></div>
+     <div class="col-md-3 col-md-offset-6"><li>HR Issues</li></div>        
+</div> <!--row 4 -->
+<div class="row">
+  <div class="col-md-3 col-md-offset-3 rowborder">Risk</div>
+  <div class="col-md-3 rowborder"><li>Off Employee Satisfaction Targets </li></div>
+  <div class="col-md-3 col-md-offset-6 "><li>Off Utilisation Targets (over and under)</li></div>  
+  <div class="col-md-3 col-md-offset-6 "><li>Technology driven compentancy changes</li></div> 
+  <div class="col-md-3 col-md-offset-6 "><li>Leadership and Cultural Issues</li></div>  
+  
+</div> <!--row  5-->
+
+<div class="row">
+  <div class="col-md-3 rowborder">Strategy</div>
+    <div class="col-md-3 rowborder">Plan</div>
+      <div class="col-md-3 rowborder"><li>Technology Horizon Review</li></div>
+        <div class="col-md-3 col-md-offset-6"><li>Business Goal Translation</li></div>
+        <div class="col-md-3 col-md-offset-6 "><li>Strategic Planning</li></div>
+        <div class="col-md-3 col-md-offset-6 "><li>Stakeholder Management</li></div>
+        <div class="col-md-3 col-md-offset-6 "><li>Communication Planning</li></div>
+        <div class="col-md-3 col-md-offset-6 "><li>Workforce Planning</li></div>                
+        <div class="col-md-3 col-md-offset-6 "><li>Customer Engagement</li></div>                       
+</div> <!--row 2 -->
+<div class="row">
+  <div class="col-md-3 col-md-offset-3 rowborder">Report</div>
+  <div class="col-md-3 rowborder"><li>Business Goal Progress and Attainment</li></div>
+  <div class="col-md-3 col-md-offset-6 "><li>Roadmaps - Actual to Plan</li></div> 
+  <div class="col-md-3 col-md-offset-6 "><li>Technology Reviews</li></div>  
+         
+</div> <!--row  3-->
+<div class="row">
+  <div class="col-md-3 col-md-offset-3 rowborder">Review</div>
+  <div class="col-md-3 rowborder"><li>Business Goal Progress and Attainment</li></div>
+  <div class="col-md-3 col-md-offset-6 "><li>Roadmaps - Actual to Plan</li></div> 
+  <div class="col-md-3 col-md-offset-6 "><li>Technology Trends</li></div> 
+</div> <!--row 4 -->
+<div class="row">
+  <div class="col-md-3 col-md-offset-3 rowborder">Risk</div>
+  <div class="col-md-3 rowborder"><li>Off Target Business Goal Remediation</li></div>
+  <div class="col-md-3 col-md-offset-6 "><li>Off Road Map Target Remediation </li></div>
+  <div class="col-md-3 col-md-offset-6 "><li>Business Change Management</li></div>     
+</div> <!--row  5-->
+
+<div class="row">
+  <div class="col-md-3 rowborder">Partners</div>
+    <div class="col-md-3 rowborder">Plan</div>
+      <div class="col-md-3 rowborder"><li>Technology Horizon Review</li></div>
+        <div class="col-md-3 col-md-offset-6"><li>Cost Review and Target Setting</li></div>
+        <div class="col-md-3 col-md-offset-6 "><li>Productivity/Efficiency Planning</li></div>
+        <div class="col-md-3 col-md-offset-6 "><li>Industry Trends</li></div>
+        <div class="col-md-3 col-md-offset-6 "><li>Business Alignment Review</li></div>        
+        <div class="col-md-3 col-md-offset-6 "><li>Strategic Partnering Planning</li></div>        
+               
+</div> <!--row 2 -->
+<div class="row">
+  <div class="col-md-3 col-md-offset-3 rowborder">Report</div>
+  <div class="col-md-3 rowborder"><li>Actual to Plan - Partnering Scorecard</li></div>
+  <div class="col-md-3 col-md-offset-6  "><li>Service Attainment</li></div> 
+     
+</div> <!--row  3-->
+<div class="row">
+  <div class="col-md-3 col-md-offset-3 rowborder">Review</div>
+  <div class="col-md-3 rowborder"><li>Actual to Plan - Partnering Scorecard</li></div>
+  <div class="col-md-3 col-md-offset-6  "><li>Service Attainment</li></div> 
+  <div class="col-md-3 col-md-offset-6  "><li>Cost and Volumes</li></div>
+</div> <!--row 4 -->
+<div class="row">
+  <div class="col-md-3 col-md-offset-3 rowborder">Risk</div>
+  <div class="col-md-3 rowborder"><li>Off Target Cost and Volumes Remediation </li></div>
+  <div class="col-md-3 col-md-offset-6  "><li> Off Target Service Level Remediation </li></div> 
+
+</div> <!--row  5-->
+
+<hr />
+
+
+<p> Next Step is to integrate these activities into a  <%= link_to ' Business Management Process', page_path('bizopsprocess')  %></p>
+
+<%= link_to image_tag("pieces1.png",:size => '150x70', alt: "Project Mgt"  ), page_path('projmgtprocess'),class: 'pull-left' %>
+<div class=' container padp'>
+<p>Putting the pieces together.</p>
+</div>
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+
+
 <p>  Subscibe to our monthly newsletter</p>
 
 

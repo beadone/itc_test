@@ -58,20 +58,22 @@
         <div class="col-sm-4"><h4> <%= link_to 'IT Project Management', page_path('projmgt'),class: 'center' %></h4>
 				<%= link_to image_tag("plansymbol.png",:size => '50x50', alt: "Rails"  ), page_path('projmgt'),class: 'pull-left' %>        	
         	<div class="padp">
+        		<p>How do you run projects successfully without an extreme amount of overhead yet still cover all the bases.</p>
         		<p>Project Management is an extremly well defined discipline. Reference volumes run to well over <strong>500 pages</strong> of process, procedures, 
-        			guides and templates. No doubt that this detailed apparoach is required for large and complex projects, but for smaller, almost everyday projects
+        			guides and templates. No doubt that this detailed approach is required for large and complex projects, but for smaller, almost everyday projects
         			a simpler, cost effective, tailored approach is required.     			
         		</p>
-        		<p>How do you run projects without an extreme amount of overhead yet still cover all the bases. Checkout our integrated approach.</p>
+        		<p> Checkout our integrated approach.</p>
         	</div> <!-- padp -->        	
         </div> <!-- column1 -->
-        <div class="col-sm-4"><h4><%= link_to 'IT Operations Management', page_path('opsmgt'),class: 'center' %></h4>
+        <div class="col-sm-4"><h4><%= link_to 'IT Service Management', page_path('opsmgt'),class: 'center' %></h4>
 				<%= link_to image_tag("buildsymbol.png", :size => '50x50',alt: "Ops mgt" ), page_path('opsmgt'),class: 'pull-left'  %>        	
-        	<div class="padp">        	      	
-        	<p>Like project management, IT Service Management and COBIT are large bodies of knowledge. ITSM can get a life of its own as you implement the
+        	<div class="padp"> 
+        		<p>How do you move from an operations focus to a service focus and not lose sight of good operational practices or incurr large implementation costs ?</p>       	      	
+        	<p>Like project management, ITIL and COBIT are large bodies of knowledge describing how to run an IT Division. ITSM can get a life of its own as you implement the
         		25 key processes in 5 core volumes of ITIL or COBITs 36 processes and at the end you may not achieve 
         		<%= link_to 'improvements in IT operations', 'http://www.prnewswire.com/news-releases/compass-itil-cobit-compliance-do-not-equal-process-maturity-134741993.html'%></p>
-			<p>How do you move from an operations focus to a service focus and not lose sight of good operational practices or incurr large implementation costs ? 
+			<p> 
 				Click here to
 				read more on a new approach.</p>
         	</div> <!-- padp -->        	
@@ -79,23 +81,33 @@
         <div class="col-sm-4"><h4><%= link_to 'IT Business Management', page_path('bizops'),class: 'center' %></h4>
 			<%= link_to image_tag("discoversymbol.png", :size => '50x50',alt: "Rails"), page_path('bizops'),class: 'pull-left' %>        	
         	<div class="padp">
-        		<p> words here
-        			        			
-        			</p> 
-	
-        	</div> <!-- padp -->
-        	
-        	
+        		<p>Business Management provides the governance functions for the IT organisation and the management interface to the business.        			        			
+        		</p> 	
+        	</div> <!-- padp -->      	
         </div><!-- column3 -->
       </div><!-- Row1 -->
-
-      <hr>
-
-
 </div> <!-- container -->
+
+<div class="container">
+	<h2>A High Level Integrated View of an IT Division</h2>
+	<p>To successfully run an IT division, you must have a sound integrated approach to management.</p>
+	<p>As stated above, there is a vast amount of guidance on how to run an IT division which runs into hundres of pages. For large enterprise
+		orgainisations, this is requiremed to be successful, but for the majority of small to medium businesses a simpler view is all that is required.</p>
+		<p>Using 3 main divisions of process and function <%= link_to "Service Management", page_path('opsmgt') %>, 
+		<%= link_to "Project Management ", page_path('projmgt') %> and 
+		<%= link_to "Business Management ", page_path('bizops') %>, an IT department can run quite successfully.
+		</p>
+		<%= image_tag("SM and proj 2b.png",:size => '450x320', alt: "IT Mgt"  )%>	
+	
+	<p>Project Management and Service Management are well defined and implementing a tailored process should be relatively simple given a positive
+		focus by the business. IT Business Managment is not defined generally and hence can take many shapes. The <%= link_to "Business Management ", page_path('bizops') %> page provides 
+		a functional view and will link these functions to Project and Service Management to give an overall integrated approach.</p>
+	</div>
+
+
 
 <script type="text/javascript">
 $(document).ready(function(){
-$('#carousel-services').carousel({interval: 3000});
+$('#carousel-services').carousel({interval: 4000});
 });
 </script>

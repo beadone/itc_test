@@ -1,0 +1,372 @@
+<% content_for :title do %>Implement Openproject<% end %>
+<h1><i class="glyphicon glyphicon-check"></i>Implement a Project</h1>
+<p>
+<%= link_to image_tag("projmgt4.png",:size => '250x120', alt: "Project Mgt"  ), page_path('projmgt'),class: 'pull-left' %>        	
+
+		<p> The following documents an approach to setting up a project in OpenProject for use in small and medium business. 
+			It shows how to get the projects defined in Openproject and then how to track the project in a simple way that 
+			does not consume too many company resources yet enables the team to stay on top of what is happening and is integrated into normal operational processes. </p> 
+		<p> I will assume that we are going to run to small projects that are related. We will define a simple waterfall set of 
+			plans for each and we will track hours as a well as tasks during the run phases of the projects and store the main project documents.
+			The project will run in the context of IT operations and is not viewed as a standalone piece of work. 
+			Below shows this simple approach to project management.
+			</p>
+        							 		
+		<hr /><%= link_to image_tag("openproject/opprocess1.png",:size => '450x500', alt: "Project Mgt"  ), class: 'centre' %> 
+		
+
+<p>The advantages from small enterprises are</p> 
+
+			<ul>
+				<li>A simple cost effective way to manage projects</li> 
+				<ul>
+					<li>Openproject server takes a small effort to setup (half a day)</li>
+					<li>The running costs are low, just the server costs only, no application costs.</li>
+					<li>Openproject uses a simple backlog and task board approach to generating the plan</li>
+					<li>Openproject provides a simple web based project update mechanism for team members.</li>
+					<li>Openproject has simple effective effort and management reporting out of the box</li>
+					<li>Allows for third parties to be tracked easily as well</li> 
+					<li>Will give back time to IT managers to concentrate on the business</li> 
+				</ul>
+				<li>The company can use more functionality as the use of management disciplines mature.</li>
+				<li>The process and toolset can be used within the company as much as in IT</li> 							
+			</ul>
+
+<h4>OpenProject Installation </h4>
+
+ <p> Installation of OpenProject is straight forward. It can be run on a small server in the cloud, such as an Amazon EC2 server, for little cost 
+or run as a virtual server on any local platform you may have setup.
+An Installation guide can be <%= link_to 'found here', page_path('openprojectinstallation')  %> or more documentation on the offical  
+<%= link_to 'OpenProject web site', 'http:\\openproject.org'  %>. Just use the search functionality to find what you want. 
+It will take an average linux administrator about 90 minutes to install. </p>
+
+<h4>OpenProject Configuration </h4>
+
+ <p>The initial <%= link_to 'configuration of OpenProject', page_path('openprojectconfiguration')  %> will take about an hour. 
+ 	Once configured, you can then use OpenProject to run as many projects as you have a need.
+ 	The configuration is flexible and you can change it as you become more familar with the functionality of the application. 
+ 	This <%= link_to ' guide', page_path('openprojectconfiguration') %> is just a suggested approach and you may choose to experiment and setup differently.
+ 	
+  It can be run on a small server in the cloud, such as an Amazon EC2 server, for little cost 
+or run as a virtual server on any local platform you may have setup.
+An Installation guide can be <%= link_to 'found here', page_path('openprojectinstallation')  %> or more documentation on the offical  
+<%= link_to 'OpenProject web site', 'http:\\openproject.org'  %>. Just use the search functionality to find what you want. 
+It will take an average linux administrator about 90 minutes to install. </p>
+
+		<h3>A Practical Implementation in OpenProject</h3>
+		<p> The following will take you through a step by step approach to setting up a project in the application OpenProject. 
+			We will follow the PMBOK approach but use the terminolgy  <%= link_to 'Discover, Plan, Build, Run and Govern ', page_path('bizopsprocess')  %>to describe steps and process.
+			We are going to make up a project called <strong>"Product X"</strong> which is a new product that the company will launch. This will require the IT department to
+			<ul> 
+				<li>Reconfigure the Enterprise Resource Management system</li>
+				<li>Install new hardware</li>
+				<li>Provide new desktop systems</li>
+				<li>Reconfigure the web site</li> 
+				</ul>
+				In the real world, it will be more complicated but this is for demonstration purposes only</p>
+		<p> If you are new to OpenProject, there is a more  <%= link_to 'basic guide', page_path('openprojectimplementation')  %> to 
+			getting started with OpenProject which you may want to review first</p>
+			<p> <strong>The discovery steps we will go through are</strong>
+				<ul>
+					<li>Confirm that Openproject has all the correct roles and definitions needed for this project</li>
+					<li>Add the startup project team to OpenProject</li>
+					<li>Create the project as a sub project of the main IT Program</li>
+					<li>Create 3 sub projects to split the work into the logical streams</li>
+					<li>Assign the team to the projects</li>
+					<li>Build the task list in the story board</li>
+					<li>Complete the assigned tasks in the discovery phase, ready for approval to move to the second phase</li>
+				</ul></p>
+				<p>You, as the project manager will use OpenProject as will the architect and business SME(s) who will create documents to be saved
+					in OpenProject and some of the team may start logging time/effort to your project so they will need access.</p>
+				<h4>Confirm Setup</h4>
+		<p>In the Admin module under Roles, confirm all the roles that this project will need are availalble in OpenProject. The roles should cover the spectrum of IT services
+	and project management as well as key business roles. If you followed the <%= link_to 'basic guide', page_path('openprojectsetup')  %>  you will have reviewed
+	the following.
+	</p>
+	<p>A suggested set of roles to choose from</p>
+			<ul>
+				<li>IT Roles</li>
+				<ul>
+					<li>IT Manager</li>
+					<li>Project Manager</li>
+					<li>PMO</li>
+					<li>System Administrator</li>
+					<li>DBA</li>
+					<li>Network</li>
+					<li>Help Desk</li>
+					<li>Application Administrator</li>
+					<li>Tester</li>
+					<li>Developer</li>
+					<li>Consultant</li>
+					<li>Vendor</li>
+					<li>Business Analyst</li>
+					<li>Service Manager</li>
+				</ul>
+				<li>Business Roles</li>
+				<ul>
+					<li>HR</li>
+					<li>Payroll</li>
+					<li>Operation Manager</li>
+					<li>Sales Manager</li>	
+					<li>Business SME</li>
+					<li>Business Manager</li>
+					<li>Service Manager</li>
+					<li>Finance</li>
+				</ul>				
+			</ul>	
+	<p>
+</p>
+<%= link_to image_tag("openproject/roles1.png",:size => '450x500', alt: "Project Mgt"  ), class: 'centre' %>
+		<p>In the Enumerations section, confirm that you have al the time tracking activities that you need defined.
+			 If you followed the <%= link_to 'basic guide', page_path('openprojectsetup')  %>  you will have reviewed
+	the following.</p>
+			<p>A suggested set of time categories to measure</p>
+			<ul>
+				<li>IT Roles</li>
+				<ul>
+					<li>Reporting</li>
+					<li>Planning</li>
+					<li>Managing</li>
+					<li>Training</li>
+					<li>Development</li>
+					<li>Installation</li>
+					<li>Administration</li>
+					<li>Change Management</li>
+					<li>Documenting</li>
+					<li>Testing</li>
+					<li>Communication</li>
+					<li>Designing</li>
+					<li>Incident Management</li>
+					<li>Request Management</li>
+					<li>Vendor Management</li>
+				</ul>
+				<li>Business Roles</li>
+				<ul>
+					<li>SME - requirements</li>
+					<li>SME - Testing</li>
+					<li>IT Review</li>
+					<li>Analysis</li>
+					<li>Contract Management</li>
+
+				</ul>				
+			</ul>	
+	
+		<%= link_to image_tag("openproject/enumerations.png",:size => '450x500', alt: "Project Mgt"  ), class: 'centre' %>
+		<hr />
+		
+		<h4>Team Setup</h4>
+		<p>Add the team</p>
+		<%= link_to image_tag("openproject/users1.png",:size => '450x500', alt: "Project Mgt"  ), class: 'centre' %>
+
+		<p>You will need to add the current project team to OpenProject. You will need just the basic team, the project manager, any PMO or assistance you use, the 
+			architect or designer, the business SME(s) and team members who will participate in this discovery phase. The aim is to keep it simple.</p>
+
+<%= link_to image_tag("openproject/users2.png",:size => '450x500', alt: "Project Mgt"  ), class: 'centre' %>
+
+		<p>Turn off all email notifications, again to keep it simple. You can ramp this up once the IT team have more experience with OpenProject. The same with LDAP
+			authentication.</p>
+			<p>Set the time zone as this will make the calendar work correctly and time stamp events correctly</p>
+			<p>You can set up rates if you want to dive into the cost account module, but again, I would not recommend it for new starter.</p>
+<%= link_to image_tag("openproject/user3.png",:size => '450x500', alt: "Project Mgt"  ), class: 'centre' %>
+		
+		<h4>Create the Project</h4>
+		<p>We will now create our project and the 3 sub projects</p> 
+		
+		<p>The project design  </p>
+		<%= link_to image_tag("openproject/Project design.png",:size => '250x100', alt: "Project Mgt"  ),'#', class: 'pull-left' %>
+		<p>
+			The <strong>IT Mgt Tier</strong> represents the department programs and will hold multiple projects as well as opertional programs. <p>The
+			<strong>Project X</strong>  tier will hold the main project structures such as project execution, monitoring and reporting. </p>
+			<p>The <strong>Sub Projects</strong> will mainly hold the task lists of 
+			the particular streams of work. For small projects, you will not need the sub projects as this adds unnecessary overhead. 
+			In this case we will push forward just to see the functionality of Openproject.</p>
+		</p>
+		<hr />
+		<hr />
+		<hr />
+		<hr />
+		<hr />
+		<hr />
+		<hr />
+		<hr />
+		<hr />
+		<p>Select Projects at the top of the menu and add a new project called <strong>IT MGT</strong></p>
+		<%= link_to image_tag("openproject/createproj1.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>
+		<p>Add the name <strong>"IT Mgt"</strong>, add a summary, "Check all" the modules to add them all and save </p>
+		<%= link_to image_tag("openproject/createproj2.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>
+		<p>You will be taken to the settings page. We will configure just the major items
+			<ul>We will 
+			<li>Add the team to the project</li>
+			<li>A simple set of versions</li>
+			<li>Change a backlog setting</li>
+			</ul> </p>
+			
+					<%= link_to image_tag("openproject/creatproj3.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>
+			<p>Click the <strong>Members</strong> tab and use the search function to add your whole team. Each team member must be given a role as well. You
+				can give team members multiple roles, but this should not be necessary for a small project. 
+				If you are using the "admin" login, do not forget to add yourself to the project  
+			</p>
+
+			<%= link_to image_tag("openproject/creatproj4.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>
+					<p>Click the <strong>Versions</strong> tab and add two new versions "Backlog" and "Wishlist"  </p>
+								
+					<%= link_to image_tag("openproject/createproj5.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>
+					<p>Add the name, a description, a start date, change sharing to "With subprojects" and change Column in backlog to "right"</p>
+					<p>You now have a location to keep department ideas/issues/plans and you can move them to your projects as you decide
+						to progress them</p>
+					<%= link_to image_tag("openproject/createproj6.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>					
+					<p>Click the <strong>Backlog Settings</strong> tab and select "close" as the definition of done  </p>
+					<%= link_to image_tag("openproject/createproj7.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>	
+
+		<p>Return to the Administration module (Modules -> Administration on the top menu bar) and
+			add second project with the name <strong>"Project X"</strong>, and make it a sub project of <strong>IT Mgt</strong>, 
+			 add a summary, "Check all" the modules to add them all and save </p>
+		<%= link_to image_tag("openproject/createproj8.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>
+		<p>When you save, you will be taken to the settings page. </p> <p>Add you team to the project as before.</p> <p> In the versions tab you will see 
+			that you have inherited the wishlist and backlog of the IT department. </p>
+		<%= link_to image_tag("openproject/createproj9.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>	
+		<p>We will add project specific versions here called "Project X", our project and "Issues and risks" to hold the issues and risks. 
+			We will also give these versions a due date based on the current best assessment and we will keep the "Column in backlog" as "left" so we 
+			get all the functionality of the backlog plugin  </p>	
+		<%= link_to image_tag("openproject/createproj10.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>	
+		<p>In this project, you can also create a forum called "Change Control" and use the forum to notify the teams of pending changes. You can also add other forums 
+			if you see s need such as "Planning"  </p>		
+			<%= link_to image_tag("openproject/projforum1.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>	
+					<p>Update the backlog settings as before  </p>
+		<p>You can use the wiki to build some of your project documentation. For example, you could put the project scope in a wiki or the high level requirements.
+			You also have the option of completing these documents in a word processor and saving them to the "Documents" section of the project. You 
+			may decide to keep the project library outside OpenProject. The wiki allows collabortion between team members and is secure. The other options allow more
+			flexibility with document creation as the wiki is in one spot only and you need access to OpenProject to use it.</p>
+		<p>If you wanted use the wiki, below is a suggested approach</p>
+		<p>Create your title page with general information about the project, then add the other documents as child pages to the title page</p>
+		<%= link_to image_tag("openproject/wiki1.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>
+		<%= link_to image_tag("openproject/wiki2.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>
+		<p>Use the "more Functions" on the right to create further tiers of wiki pages. You can then have the team members start creating the project documents</p>
+		<%= link_to image_tag("openproject/wiki3.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>
+		<hr />
+		<p>We will now add the 3 sub-projects. This should be quicker as we will use the copy function to create the second and third projects.</p>
+		<p>Return to the Administration module (Modules -> Administration on the top menu bar) and
+			add a project with the name <strong>"Project X Infrastructure"</strong>, and make it a sub project of <strong>Project X</strong>, 
+			 add a summary, "Check all" the modules to add them all and save </p>
+		<%= link_to image_tag("openproject/createproj11.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>
+		<p>Add the team members and update the backlog setting for the "close" option. We do not have to add any versions, or forums or wiki's as we will
+			use the Project X framework for project management and monitoring</p>
+		<p>Once you have save the settings you can add the project and project type</p>
+		<%= link_to image_tag("openproject/createproj13.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>
+		<p>Next we will copy this project for the other 2 sub projects</p>
+		<%= link_to image_tag("openproject/createproj12.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>
+		<p>click <kbd>Copy</kbd> and fill in the project name "Project x Applications", update the description and click <kbd>Copy</kbd>. 
+			Repeat this for the "Project X Desktop" sub project. The copy is a batch process, so you will need to wait to complete the final steps below</p>
+		<%= link_to image_tag("openproject/createproj14.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>		
+		<hr />
+		<p>More information on  
+		<%= link_to 'copying and templates', 'https://www.openproject.org/projects/openproject/wiki/Release_Notes_-_Copy_projects_based_on_Templates' %>
+		can be found on the OpenProject site</p>
+		<hr />
+		<p>We are almost finished building the program framework. We need to add the project task lists for each project</p>
+		<p>Select each sub-project, going into the project settings and add another "Version" called "Project X Infrastructure"
+			for the infrastructure sub-project or "Project X Applications" for the application sub-project or 
+			"Project X Desktop" for the desktop sub project. Make these versions "With Project Hierarchy".</p>
+		<%= link_to image_tag("openproject/createproj15.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>		
+	
+		<hr />	
+		<h3>Adding the High Level Plan</h3>
+		<p>The framework is complete and we are going to build the project using the backlog plugin. It is based on an agile methodology call scrum, but the simple "sticker board"
+			approach has broad appeal and can be used in many story building exercises. It is based on the 
+			<%= link_to ' Kanban Board', 'http://en.wikipedia.org/wiki/Kanban_board' %> tool.
+			<%= link_to image_tag("openproject/Simple-kanban-board-.jpg",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>	
+		</p>
+		<hr />
+		<p>There are many different ways for you to gather the information to build your skeleton project for example from templates, kick off a workshop, build it 
+			from experience. I will use the following as a guide for this demonstration. It is not meant to be complete or ordered.
+			<ul> Skeleton Project
+				<li>Complete Requirements</li>
+				<li>Complete Scope</li>
+				<li>Complete Team Structure</li>
+				<li>Confirm Initial Funding</li>
+				<li>Book first Exec presentation</li>
+				<li>Create Communication Plan</li>
+				<li>Create Change Control Plan</li>
+				<li>Design System and app changes</li>
+				<li>Build Infrastructure</li>
+				<li>Test Infrastructure</li>
+				<li>Build Desktop</li>
+				<li>Test Desktop</li>
+				<li>Configuration Application</li>
+				<li>Test New configuration</li>
+				<li>User Acceptance Testing</li>
+				<li>Integration Testing</li>
+				<li>Commission New Product</li>
+				<li>Close down</li>
+			</ul>
+			</p>	
+		<p> These items will be entered into the backlog process and be used to build out the detailed plan</p>
+			
+			<%= link_to image_tag("openproject/backlog2.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>				
+			
+		<hr />
+		<p>Select "backlogs" under the main project - Project X, click on the dropdown arrow nex to the "backlog" version and select "New Story"</p>
+		<p>Enter all your high level project tasks as a "New Story"</p>
+		<%= link_to image_tag("openproject/backlog3.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>	
+		<p>Keep the phase "new" and enter a priority in the last input, press enter to save the item. These options where configured when the backlog plugin was configured. You can change them 
+			in the administration module under the plugins option.</p>
+			<%= link_to image_tag("openproject/backlog4.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>				
+		<hr />
+		<p>You are now ready to build your project using the kanban approach or the traditional approaches</p>
+		<p>Drag the items you need to work on from the backlog to the project and use either the "task board"
+			or the traditional workpackages to build the next level</p> 
+		<%= link_to image_tag("openproject/backlog5.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>	
+		<hr />
+		<%= link_to image_tag("openproject/backlog6.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>	
+		<hr />
+		<p>In the task board, click the "+" beside the Story and start adding tasks and assigning them to the team. Also estimate the hours if possible</p>
+		<%= link_to image_tag("openproject/backlog7.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>	
+		<hr />
+		<p>You will generate a list of colour coded tasks tha tyou can now move (drag) to in progress and the team can start working on them.
+			You may want to further define each task. To do that open it up in the "Work Packages" menu option</p>
+
+		<%= link_to image_tag("openproject/backlog8.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>	
+		<hr />
+		<%= link_to image_tag("openproject/backlog9.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>	
+		<hr />
+		<p>In the Work Packages menu, you now see the task as child task of the main story. The backlog process produces only 1 level of task nesting. 
+			You will need to use the Work Packages screen to produce a more complex task list.</p>	
+			<%= link_to image_tag("openproject/backlog10.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>
+		<hr />	
+		<p>The stories now have to changed to in progress and updated with owners. The tasks have to be updated as well as the stories get their dates from the tasks. 
+			Click on each story in
+			the backlog screen and select update. Add an Assignee, Owner, change the status to in progress. You also have the option to start recording effort against the 
+			task. Select the ctivity in the drop down and add the effor in the time spent. and add a comment on what was completed.
+			Update all the tasks with their start and end dates, this will complete the first draft plan. All the tasks, by default, are coded as features. You can update
+			 this to other types such as "milestone" or "support" or "bug" by clicking the "Change Properties" down arrow just above the "Status" line</p>	
+		
+		<%= link_to image_tag("openproject/backlog11.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>	
+					<p>  </p>
+		<%= link_to image_tag("openproject/backlog12.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>			
+					<p>  </p>
+					<p> You will see the timeline take shape. The first time you select "Timeline", you will have to create a report.You may even
+						edit the tasks from the timeline reports.</p>
+		<%= link_to image_tag("openproject/backlog13.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>					
+		<p>This report is a simple almost default report. It has zoom factor set to "days" and shows all the tasks. You can add columns and apply
+			various filters. We will use the "projects" filter, once we move our tasks to their correct sub projects. There are various filters provided so you can fine tune the reports
+			you need. </p>
+		<%= link_to image_tag("openproject/backlog14.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>
+		<p>  </p>
+		<h4>Sub-Project Management</h4>
+		<p>While this set of project tasks are too small to justify using sub-projects, it is worth seeing how this functionality works. 
+			A sub-project provides additional abilities of segementation and security, workflow and reporting. </p>
+		<p>You can have teams and even third parties provide updates into the system with out compromising security which is a great time saver. 
+			The more independant the teams are, the more efficient the project becomes.</p>
+		<p>We are going to use the backlog function to move the work to the sub-projects. We will update the project relationships and see how the 
+			reporting changes</p>
+		<p>Drag the stories to the sub projects. We will then update the project relationships so the timeline report shows all the projects sorted correctly</p>
+		<%= link_to image_tag("openproject/backlog15.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>
+		<p>You now need to update the tasks to have the same target version as the stories. Go into the workpackages screen and select the tasks that 
+			still require a target version and update it to the parent target version. Note, you can pin your view to the left side menu by using the "More Functions" opion.
+			This will speed up your review.</p>
+		<%= link_to image_tag("openproject/backlog16.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>
+		<p>Update dependancies</p>
+		<%= link_to image_tag("openproject/backlog17.png",:size => '450x500', alt: "Project Mgt"  ), '#', class: 'centre' %>		
+		
+		
+<%= link_to image_tag("logosquare2.png",:size => '100x100', alt: "Logo"  ), root_path, class: 'pull-left' %> 
