@@ -1,94 +1,98 @@
-<% content_for :title do %>Project Management<% end %>
-<h1><i class="glyphicon glyphicon-check"></i>Project and Program Management</h1>
+<% content_for :title do %>Project Management<% end %> <h1><i class="glyphicon glyphicon-check"></i>Project and Program Management</h1>
 <p>
-<%= link_to image_tag("projmgt4.png",:size => '250x120', alt: "Project Mgt"  ), page_path('projmgt'),class: 'pull-left' %>        	
+	<%= link_to image_tag("projmgt4.png",:size => '250x120', alt: "Project Mgt"  ), page_path('projmgt'),class: 'pull-left' %>
 	<div class="padp">
-		<p> This page will provide a simple framework for running projects and programs in small to medium business using a tailored 
+		<p>
+			This page will provide a simple framework for running projects and programs in small to medium business using a tailored
 			<%= link_to "PMI", 'http://pmi.org' %>
-        			process that can be used in an opensource application called <%= link_to "OpenProject", 'http://openproject.org' %>. It will introduce a common venacular
-        			to integrate project mangagement into the daily operation cycles that run in a small to medium sized IT shop. </p>  
-        							 		
+			process that can be used in an opensource application called <%= link_to "OpenProject", 'http://openproject.org' %>. It will introduce a common vernacular
+			to integrate project management into the daily operation cycles that run in a small to medium sized IT shop.
+		</p>
+
 		<hr />
-        <p>IT Project management is a well docuumented process. It is so well documented, the major challenge is to 
-        			decide what you will use from the available information and what you will not. There a 4 phases in the 
-        			PMI process with a 5th process to control the project. within each of these process groups there are many processes.</p>
+		<p>
+			IT Project management is a well documented process. It is so well documented, the major challenge is to
+			decide what you will use from the available information and what you will not. There a 4 phases in the
+			PMI process with a 5th process to control the project. within each of these process groups there are many processes.
+		</p>
 
-			
-<div class="opsmgt"> 
-<div class="span">	
-<table class="table table-condensed table-hover">
-	<caption> <h3>PMBOK Phases</h3> </caption>
-    
- 	<tbody>
-		<tr>
-     		<td><%= link_to 'Initiation', page_path('projmgtinitiation'),class: 'center' %></td>
-      </tr>
-		<tr>
-     		<td><%= link_to 'Planning', page_path('projmgtplanning'),class: 'center' %></td>
-      </tr>
-      		<tr>
-     		<td><%= link_to 'Execution', page_path('projmgtexecution'),class: 'center' %></td>
-        	</tr>
-      		<tr>
-     		<td><%= link_to 'Close Down', page_path('projmgtclosedown'),class: 'center' %></td>
-        	</tr>
- 	</tbody>    
-      
- 
-</table>  <!-- stripped table -->
-</div>
-</div>
-			
-			<p> The 5th process is the Controlling and Monitoring Process which describes how to run the 4 phases of a project.</p>
-<%= link_to image_tag("pmpoverview1.png",:size => '450x320', alt: "Project Mgt"  ), page_path('pmi.org')%>			
-			
-			
-    		<hr />
-    		<hr />
+		<div class="opsmgt">
+			<div class="span">
+				<table class="table table-condensed table-hover">
+					<caption>
+						<h3>PMBOK Phases</h3>
+					</caption>
 
-    		
-    		
-    		<hr />
-<%= link_to image_tag("cogs2 glossy background4 cube.png",:size => '50x50', alt: "Project Mgt"  ), page_path('projmgt'),class: 'pull-left' %> 
-<h4> OpenProject</h4>
-    		<hr />
-    		<hr />
-    		<hr />
-    		<hr />
+					<tbody>
+						<tr>
+							<td><%= link_to 'Initiation', page_path('projmgtinitiation'),class: 'center' %></td>
+						</tr>
+						<tr>
+							<td><%= link_to 'Planning', page_path('projmgtplanning'),class: 'center' %></td>
+						</tr>
+						<tr>
+							<td><%= link_to 'Execution', page_path('projmgtexecution'),class: 'center' %></td>
+						</tr>
+						<tr>
+							<td><%= link_to 'Close Down', page_path('projmgtclosedown'),class: 'center' %></td>
+						</tr>
+					</tbody>
 
+				</table>
+				<!-- stripped table -->
+			</div>
+		</div>
 
+		<p>
+			The 5th process is the Controlling and Monitoring Process which describes how to run the 4 phases of a project.
+		</p>
+		<%= link_to image_tag("pmpoverview1.png",:size => '450x320', alt: "Project Mgt"  ), page_path('pmi.org')%>
 
+		<hr />
+		<hr />
 
-    The ten knowledge areas are:
+		<hr />
+		<%= link_to image_tag("cogs2 glossy background4 cube.png",:size => '50x50', alt: "Project Mgt"  ), page_path('projmgt'),class: 'pull-left' %>
+		<h4> OpenProject</h4>
+		<hr />
+		<hr />
+		<hr />
+		<hr />
 
-<hr />     Project Integration Management : Project Integration Management includes the processes and activities needed to identify, define, combine, unify, and coordinate the various processes and project management activities within the Project Management Process Groups.
-<hr />    Project Scope Management : Project Scope Management includes the processes required to ensure that the project includes all the work required, and only the work required, to complete the project successfully.
-<hr />     Project Time Management : Project Time Management includes the processes required to manage the timely completion of the project.
-<hr />     Project Cost Management : Project Cost Management includes the processes involved in planning, estimating, budgeting, financing, funding, managing, and controlling costs so that the project can be completed within the approved budget.
-<hr />     Project Quality Management : Project Quality Management includes the processes and activities of the performing organization that determine quality policies, objectives, and responsibilities so that the project will satisfy the needs for which it was undertaken.
-<hr />     Project Human Resource Management : Project Human Resource Management includes the processes that organize, manage, and lead the project team.
-<hr />     Project Communications Management : Project Communications Management includes the processes that are required to ensure timely and appropriate planning, collection, creation, distribution, storage, retrieval, management, control, monitoring, and the ultimate disposition of project information.
-<hr />     Project Risk Management : Project Risk Management includes the processes of conducting risk management planning, identification, analysis, response planning, and controlling risk on a project.
-<hr />     Project Procurement Management : Project Procurement Management includes the processes necessary to purchase or acquire products, services, or results needed from outside the project team
-<hr />     Project Stakeholders Management : Project Stakeholder Management includes the processes required to identify all people or organizations impacted by the project, analyzing stakeholder expectations and impact on the project, and developing appropriate management strategies for effectively engaging stakeholders in project decisions and execution.
+		The ten knowledge areas are:
 
+		<hr />
+		Project Integration Management : Project Integration Management includes the processes and activities needed to identify, define, combine, unify, and coordinate the various processes and project management activities within the Project Management Process Groups.
+		<hr />
+		Project Scope Management : Project Scope Management includes the processes required to ensure that the project includes all the work required, and only the work required, to complete the project successfully.
+		<hr />
+		Project Time Management : Project Time Management includes the processes required to manage the timely completion of the project.
+		<hr />
+		Project Cost Management : Project Cost Management includes the processes involved in planning, estimating, budgeting, financing, funding, managing, and controlling costs so that the project can be completed within the approved budget.
+		<hr />
+		Project Quality Management : Project Quality Management includes the processes and activities of the performing organization that determine quality policies, objectives, and responsibilities so that the project will satisfy the needs for which it was undertaken.
+		<hr />
+		Project Human Resource Management : Project Human Resource Management includes the processes that organize, manage, and lead the project team.
+		<hr />
+		Project Communications Management : Project Communications Management includes the processes that are required to ensure timely and appropriate planning, collection, creation, distribution, storage, retrieval, management, control, monitoring, and the ultimate disposition of project information.
+		<hr />
+		Project Risk Management : Project Risk Management includes the processes of conducting risk management planning, identification, analysis, response planning, and controlling risk on a project.
+		<hr />
+		Project Procurement Management : Project Procurement Management includes the processes necessary to purchase or acquire products, services, or results needed from outside the project team
+		<hr />
+		Project Stakeholders Management : Project Stakeholder Management includes the processes required to identify all people or organizations impacted by the project, analyzing stakeholder expectations and impact on the project, and developing appropriate management strategies for effectively engaging stakeholders in project decisions and execution.
 
-<hr />
+		<p>
+			Subscribe to our monthly newsletter
+		</p>
 
-
-
-
-<p>  Subscibe to our monthly newsletter</p>
-
-
-	    <div class="control-group">
-		    <label class="control-label" for="inputIcon">Email address</label>
-		    <div class="controls">
-			    <div class="input-prepend">
-			    	<span class="add-on"><i class="glyphicon glyphicon-envelope"></i></span>
-				    <input class="span2" id="inputIcon" type="text">
-		    	</div>
-		    </div>
-	    </div>
-	<hr>    
-   
+		<div class="control-group">
+			<label class="control-label" for="inputIcon">Email address</label>
+			<div class="controls">
+				<div class="input-prepend">
+					<span class="add-on"><i class="glyphicon glyphicon-envelope"></i></span>
+					<input class="span2" id="inputIcon" type="text">
+				</div>
+			</div>
+		</div>
+		<hr>

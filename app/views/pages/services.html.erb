@@ -1,113 +1,143 @@
-<% content_for :title do %>Services<% end %>
-<h1><i class="glyphicon glyphicon-briefcase"></i>Services</h1>
-<blockquote>"All models are wrong, some are useful" - George E. P. Box </blockquote>
+<% content_for :title do %>Services<% end %> <h1><i class="glyphicon glyphicon-briefcase"></i>Services</h1>
+<blockquote>
+	"All models are wrong, some are useful" - George E. P. Box
+</blockquote>
 <div class="container">
-<div id="carousel-services" class="carousel slide carousel-fade" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-services" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-services" data-slide-to="1"></li>
-    <li data-target="#carousel-services" data-slide-to="2"></li>
-  </ol>
- 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
- 	<%= link_to image_tag("projecttimeline41200x315.png", alt: "pc mouse pic"), '#' %> 
-      <div class="carousel-caption ">
-      	<div class="text-info">
-      	<h3>IT Project Management</h3>
-        <p class="lead">Cost effective approaches to better management.</p>
-      	<%= link_to 'Learn More', page_path('projmgt'),class: 'btn btn-large btn-primary'   %>  
-      	</div>
-      </div>
-    </div>
-    <div class="item">
-    	<%= link_to image_tag("itil v31200x315.png", alt: "dunn itc logo"), '#' %> 
-      <div class="carousel-caption">
-      	<div class="text-info">
-      	<h3>IT Business Operations</h3>
-      	<p class="lead">Governance, Cost Management, Vendor Management.</p>
-      	<%= link_to 'Learn More', page_path('bizops'),class: 'btn btn-large btn-primary'   %>  
-      </div>
-      </div>
-    </div>
-    <div class="item">
-       	<%= link_to image_tag("opscycle21200x315.png", alt: "ops cycle"), '#' %>      
-      <div class="carousel-caption">
-        <h3> IT Service Management</h3>
-      	<p class="lead">Service management that works, Service Recovery</p>
-      <!--	<a class="btn btn-large btn-primary" href="#">Learn more</a> -->
-      	<%= link_to 'Learn More', page_path('opsmgt'),class: 'btn btn-large btn-primary'   %>  
-      </div>
-    </div>
-  </div>
- 
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-services" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
-  <a class="right carousel-control" href="#carousel-services" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
-</div> <!-- Carousel -->
+	<div id="carousel-services" class="carousel slide carousel-fade" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#carousel-services" data-slide-to="0" class="active"></li>
+			<li data-target="#carousel-services" data-slide-to="1"></li>
+			<li data-target="#carousel-services" data-slide-to="2"></li>
+		</ol>
 
-<hr>
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<%= link_to image_tag("projecttimeline41200x315.png", alt: "pc mouse pic"), '#' %>
+				<div class="carousel-caption ">
+					<div class="text-info">
+						<h3>IT Project Management</h3>
+						<p class="lead">
+							Cost effective approaches to better management.
+						</p>
+						<%= link_to 'Learn More', page_path('projmgt'),class: 'btn btn-large btn-primary'   %>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<%= link_to image_tag("itil v31200x315.png", alt: "dunn itc logo"), '#' %>
+				<div class="carousel-caption">
+					<div class="text-info">
+						<h3>IT Business Operations</h3>
+						<p class="lead">
+							Governance, Cost Management, Vendor Management.
+						</p>
+						<%= link_to 'Learn More', page_path('bizops'),class: 'btn btn-large btn-primary'   %>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<%= link_to image_tag("opscycle21200x315.png", alt: "ops cycle"), '#' %>
+				<div class="carousel-caption">
+					<h3> IT Service Management</h3>
+					<p class="lead">
+						Service management that works, Service Recovery
+					</p>
+					<!--	<a class="btn btn-large btn-primary" href="#">Learn more</a> -->
+					<%= link_to 'Learn More', page_path('opsmgt'),class: 'btn btn-large btn-primary'   %>
+				</div>
+			</div>
+		</div>
 
-      <div class="row">
-        <div class="col-sm-4"><h4> <%= link_to 'IT Project Management', page_path('projmgt'),class: 'center' %></h4>
-				<%= link_to image_tag("plansymbol.png",:size => '50x50', alt: "Rails"  ), page_path('projmgt'),class: 'pull-left' %>        	
-        	<div class="padp">
-        		<p>How do you run projects successfully without an extreme amount of overhead yet still cover all the bases.</p>
-        		<p>Project Management is an extremly well defined discipline. Reference volumes run to well over <strong>500 pages</strong> of process, procedures, 
-        			guides and templates. No doubt that this detailed approach is required for large and complex projects, but for smaller, almost everyday projects
-        			a simpler, cost effective, tailored approach is required.     			
-        		</p>
-        		<p> Checkout our integrated approach.</p>
-        	</div> <!-- padp -->        	
-        </div> <!-- column1 -->
-        <div class="col-sm-4"><h4><%= link_to 'IT Service Management', page_path('opsmgt'),class: 'center' %></h4>
-				<%= link_to image_tag("buildsymbol.png", :size => '50x50',alt: "Ops mgt" ), page_path('opsmgt'),class: 'pull-left'  %>        	
-        	<div class="padp"> 
-        		<p>How do you move from an operations focus to a service focus and not lose sight of good operational practices or incurr large implementation costs ?</p>       	      	
-        	<p>Like project management, ITIL and COBIT are large bodies of knowledge describing how to run an IT Division. ITSM can get a life of its own as you implement the
-        		25 key processes in 5 core volumes of ITIL or COBITs 36 processes and at the end you may not achieve 
-        		<%= link_to 'improvements in IT operations', 'http://www.prnewswire.com/news-releases/compass-itil-cobit-compliance-do-not-equal-process-maturity-134741993.html'%></p>
-			<p> 
-				Click here to
-				read more on a new approach.</p>
-        	</div> <!-- padp -->        	
-        </div><!-- column2 -->
-        <div class="col-sm-4"><h4><%= link_to 'IT Business Management', page_path('bizops'),class: 'center' %></h4>
-			<%= link_to image_tag("discoversymbol.png", :size => '50x50',alt: "Rails"), page_path('bizops'),class: 'pull-left' %>        	
-        	<div class="padp">
-        		<p>Business Management provides the governance functions for the IT organisation and the management interface to the business.        			        			
-        		</p> 	
-        	</div> <!-- padp -->      	
-        </div><!-- column3 -->
-      </div><!-- Row1 -->
-</div> <!-- container -->
+		<!-- Controls -->
+		<a class="left carousel-control" href="#carousel-services" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
+		<a class="right carousel-control" href="#carousel-services" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
+	</div>
+	<!-- Carousel -->
+
+	<hr>
+
+	<div class="row">
+		<div class="col-sm-4">
+			<h4> <%= link_to 'IT Project Management', page_path('projmgt'),class: 'center' %></h4>
+			<%= link_to image_tag("plansymbol.png",:size => '50x50', alt: "Rails"  ), page_path('projmgt'),class: 'pull-left' %>
+			<div class="padp">
+				<p>
+					How do you run projects successfully without an extreme amount of overhead yet still cover all the bases.
+				</p>
+				<p>
+					Project Management is an extremely well defined discipline. Reference volumes run to well over <strong>500 pages</strong> of process, procedures,
+					guides and templates. No doubt that this detailed approach is required for large and complex projects, but for smaller, almost everyday projects
+					a simpler, cost effective, tailored approach is required.
+				</p>
+				<p>
+					Checkout our integrated approach.
+				</p>
+			</div>
+			<!-- padp -->
+		</div>
+		<!-- column1 -->
+		<div class="col-sm-4">
+			<h4><%= link_to 'IT Service Management', page_path('opsmgt'),class: 'center' %></h4>
+			<%= link_to image_tag("buildsymbol.png", :size => '50x50',alt: "Ops mgt" ), page_path('opsmgt'),class: 'pull-left'  %>
+			<div class="padp">
+				<p>
+					How do you move from an operations focus to a service focus and not lose sight of good operational practices or incur large implementation costs ?
+				</p>
+				<p>
+					Like project management, ITIL and COBIT are large bodies of knowledge describing how to run an IT Division. ITSM can get a life of its own as you implement the
+					25 key processes in 5 core volumes of ITIL or COBITs 36 processes and at the end you may not achieve
+					<%= link_to 'improvements in IT operations', 'http://www.prnewswire.com/news-releases/compass-itil-cobit-compliance-do-not-equal-process-maturity-134741993.html'%>
+				</p>
+				<p>
+					Click here to
+					read more on a new approach.
+				</p>
+			</div>
+			<!-- padp -->
+		</div><!-- column2 -->
+		<div class="col-sm-4">
+			<h4><%= link_to 'IT Business Management', page_path('bizops'),class: 'center' %></h4>
+			<%= link_to image_tag("discoversymbol.png", :size => '50x50',alt: "Rails"), page_path('bizops'),class: 'pull-left' %>
+			<div class="padp">
+				<p>
+					Business Management provides the governance functions for the IT organisation and the management interface to the business.
+				</p>
+			</div>
+			<!-- padp -->
+		</div><!-- column3 -->
+	</div><!-- Row1 -->
+</div>
+<!-- container -->
 
 <div class="container">
 	<h2>A High Level Integrated View of an IT Division</h2>
-	<p>To successfully run an IT division, you must have a sound integrated approach to management.</p>
-	<p>There is a vast amount of guidance on the Internet describing how to manage an IT division which runs into hundres of pages. For large enterprise
-		orgainisations, this detailed approach is requireed to be successful, but for the majority of small to medium businesses a simpler view is all that is required.</p>
-		<p>Using 3 main divisions of process and function <%= link_to "Service Management", page_path('opsmgt') %>, 
-		<%= link_to "Project Management ", page_path('projmgt') %> and 
+	<p>
+		To successfully run an IT division, you must have a sound integrated approach to management.
+	</p>
+	<p>
+		There is a vast amount of guidance on the Internet describing how to manage an IT division which runs into hundreds of pages. For large enterprise
+		orgainisations, this detailed approach is required to be successful, but for the majority of small to medium businesses a simpler view is all that is required.
+	</p>
+	<p>
+		Using 3 main divisions of process and function <%= link_to "Service Management", page_path('opsmgt') %>,
+		<%= link_to "Project Management ", page_path('projmgt') %> and
 		<%= link_to "Business Management ", page_path('bizops') %>, an IT department can run quite successfully.
-		</p>
-		<%= image_tag("SM and proj 2b.png",:size => '450x320', alt: "IT Mgt"  )%>	
-	
-	<p>Project Management and Service Management are well defined and implementing a tailored process should be relatively simple given a positive
-		focus by the business. IT Business Managment is not defined generally and hence can take many shapes. The <%= link_to "Business Management ", page_path('bizops') %> page provides 
-		a functional view and will link these functions to Project and Service Management to give an overall integrated approach.</p>
-	</div>
+	</p>
+	<%= image_tag("SM and proj 2b.png",:size => '450x320', alt: "IT Mgt"  )%>
 
-
+	<p>
+		Project Management and Service Management are well defined and implementing a tailored process should be relatively simple given a positive
+		focus by the business. IT Business Managment is not defined generally and hence can take many shapes. The <%= link_to "Business Management ", page_path('bizops') %> page provides
+		a functional view and will link these functions to Project and Service Management to give an overall integrated approach.
+	</p>
+</div>
 
 <script type="text/javascript">
-$(document).ready(function(){
-$('#carousel-services').carousel({interval: 4000});
-});
+	$(document).ready(function() {
+		$('#carousel-services').carousel({
+			interval : 4000
+		});
+	}); 
 </script>
