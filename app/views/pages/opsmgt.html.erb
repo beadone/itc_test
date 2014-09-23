@@ -1,6 +1,6 @@
 <% content_for :title do %>Service Management<% end %> <h1><i class="glyphicon glyphicon-refresh"></i>Service Management</h1>
 
-<%= link_to image_tag("knowledgebase2.png",:size => '150x60', alt: "Service Management"  ), page_path('projmgt'),class: 'pull-left' %>
+<%= link_to image_tag("knowledgebase2.png",:size => '150x60', alt: "Service Management"  ), page_path('opsmgt'),class: 'pull-left' %>
 <div class="padp">
 
 	<blockquote>
@@ -11,10 +11,13 @@
 		</p>
 	</blockquote>
 	<p>
-		Moving down the path of implementing ITSM should not add a layer of management (and cost) to the team but should have lasting effects on the team and the wider business.
+		The CEO wants to see a change to a service based culture in IT but without any or little additional cost. How do you achieve this ?
+		The last time you looked at the 	<%= link_to  'ITIL', 'http://www.itil-officialsite.com/'%> based Service Management Process, it was over 500 pages of change.
+		
+		
 	</p>
 	<p>
-		You can use a simple 3 pronged approach focusing on <strong>People, Process and Tools</strong> to achieve your goal.
+		I suggest you can use a simple 3 pronged approach focusing on <strong>People, Process and Tools</strong>  and work your way through a maturing process to achieve your goal.
 
 	</p>
 
@@ -67,6 +70,15 @@
 		</li>
 		<li>
 			improved customer satisfaction through better expectation setting and transparency.
+		</li>
+				<li>
+			improved cost.
+		</li>
+				<li>
+			improved use of skills.
+		</li>
+				<li>
+			improved service delivery from third parties.
 		</li>
 	</ul>
 </p>
@@ -154,11 +166,23 @@
 </div>
 
 <h2> <%= link_to 'Implementing Service Management', page_path('Serviceimplementation') %> </h2>
-<h3> <%= link_to 'Dont Start from Scratch', page_path('Serviceimplementation') %> </h3>
+
+<p>Below is an example of a generic high level Service Management Implementation Plan. </p>
+
+<p>	It will run like any other project and you are encouraged to follow standard project management processes.
+	Follow the link <%= link_to 'link', page_path('Serviceimplementation') %> to find out the next level of detail. 
+
+<%= link_to image_tag("SeviceImp1.png",:size => '450x600', alt: "Service Management"  ), page_path('projmgt'),class: 'pull-left' %>
+
+</p>	
+<hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>
 
 <hr>
 <hr>
-
+<div class="small text-left">
+ITIL® is a registered trademark of the UK Office of Government Commerce.
+</div>
+<hr>
 <p>
 	Subscribe to our monthly newsletter
 </p>

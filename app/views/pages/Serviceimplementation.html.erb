@@ -1,4 +1,159 @@
 <% content_for :title do %>Service Management Implementation<% end %>
 <h1><i class="glyphicon glyphicon-refresh"></i>Service Management Implementation</h1>
 
-	<%= link_to image_tag("knowlegebasesymbol2.png",:size => '150x60', alt: "Service Management"  ), page_path('opsmgt'),class: 'pull-left' %>  
+	<%= link_to image_tag("knowlegebasesymbol3.png",:size => '150x60', alt: "Service Management"  ), page_path('opsmgt'),class: 'pull-left' %> 
+	
+	
+	<p>These pages will take you through the steps to <strong>generate a business case</strong> and move through the 
+		<%= link_to 'discovery phase', page_path('projmgtintiation') %>, the
+		<%= link_to 'planning phase', page_path('projmgtplanning') %>, the
+		<%= link_to 'building phase', page_path('projmgtexecution') %>, and the 
+		<%= link_to 'Close down/run phase', page_path('projmgtclosedown') %> 
+		 of your project. </p> 
+		 
+<p>
+			<%=link_to image_tag("opscyclegovern2.png",:size => '450x320', alt: "service Mgt"  )%> 
+			
+</p>
+
+<h3>Building the Business Case</h3>
+
+<p>The business case will contain the following elements</p>
+
+<ul>
+	<li>Agreed IT Business Goals </li>
+	<li>Current IT Baseline</li>	
+	<li>High level gap analysis - Baseline to goals</li>	
+	<li>Proposed Scope and Benefits</li>
+	<li>High Level Cost Estimate</li>	
+	<li>High Level Risk Assessment</li>	
+	<li>High Level Plan with Milestones</li>
+	<li>Proposed Project Governance</li>			
+</ul>
+	</p>
+<h4>Business Goals<a name="Business Goals" id="Business Goals"></a></h4>
+<p>The first step is to compare the current IT services and service levels to business expectations. 
+	If you do not have a set of IT business goals matched to the business plan, then the following will constitute your first set of actions
+	<ul>
+	<li>Collect Business Goals</li>
+	<li>Create draft IT Business Goals aligned to the Business Goals</li>	
+	<li>Gather Business Feedback</li>
+	<li>Re-draft IT Business Goals</li>		
+	<li>Present Goals to Executive Management for review and approval</li>
+	<li>Publish Goals</li>			
+</ul>
+
+<p>You should now have a set of agreed business goals. While you are in discovery (listerning) mode, you should not limit any business requirements. You will prioritise 
+	and cost these requirements in later steps and present them back in the business case for a business decision. 
+	This step is part of creating your <strong>Service Pipeline</strong> and building your <strong>Service Catalogue</strong></p>
+	
+	<%=link_to image_tag("serviceportfolio1.png",:size => '450x320', alt: "service Mgt"  )%>
+
+<h4>IT Baseline</h4>
+<p>	
+	You need to be able to articulate the current services and service levels provided by the IT department and it's service partners to the business by business lines.
+	It is best to start a draft Services Catelogue to hold the information.</p>
+	<p>
+	<%= link_to "Service Catalogue Draft Example.pdf", pdf_path('Service Catalogue Draft Example.pdf')  %>
+	</p>
+	
+	
+	
+	You would typically divide the IT services into the standard ITIL practice areas of 
+	
+	<ul>
+	<li>Service Desk</li>
+	<li>Application Management</li>
+	<li>Infrastructure Management</li>
+</ul>
+
+<p>You then map the Business Lines to the IT Services and Infrastructure
+	<%=link_to image_tag("servicemapping1.png",:size => '450x320', alt: "service Mgt"  )%>	
+	</p>
+	<p>The diagram above is a simplified version of a mapping diagram. In reality there will be a lot of shared services and infrastructure. </p>		
+
+	<p>You will be starting to define the <strong>Service Catalogue</strong> which is a part of your <strong>Service Portfolio</strong>. The draft Services
+		catalogue above or similar document is a good place to record the information. 
+		</p>
+		<p>
+		You will map IT services such as:
+		
+	<ul>
+	<li>Incident Management</li>
+	<li>Desktop Service Requests</li>
+	<li>Access Request</li>
+	<li>Application Enhancement</li>
+	<li>Application Bug Fix</li>
+	<li>New Product Web Page</li>
+	<li>New Marketing Web Page</li>
+	<li>New Employee Training</li>
+	<li>Field Support Break Fix</li>
+</ul>			
+		</p> 
+<p>You will have to balance the need to an create accurate detailed map of the current services with time and cost constraints of completing the business case. 
+	The more detailed you are, the more accurate the gap analysis will be but put you at risk of analysis paralysis. You may need the 
+	services of an experienced Service Manager at this point. To complete this step and the gap analysis is a difficult task requiring expert knowledge
+	and some well defined templates in order to complete in a resonable time.</p>
+
+<p>Next you need to map the applications, infrastructure and technical support to the plan. This will show how the physical environment supports the services</p>
+
+<p>Your mapping is starting to look like
+		<%=link_to image_tag("servicemapping2.png",:size => '450x320', alt: "service Mgt"  )%></p>	
+
+<p> As you move through this process, you will be building the skeleton of 
+you configuration management database (CMDB) and of your Configuration Items (CIs).
+	<%=link_to image_tag("serviceportfolio2.png",:size => '450x320', alt: "service Mgt"  )%>	
+	 </p>	
+	 
+<p>You then add your KPI's, current service trends and third party contract service levels to the defined services in your draft catalogue. 
+You may have information such as
+		 	
+	<ul>
+	<li>number of incoming calls</li>
+	<li>number of incidents</li>
+	<li>number of repeat incidents</li>
+	<li>number of help desk resolutions</li>
+	<li>number of escalations</li>
+	<li>number of service interuptions</li>
+	<li>average service down time</li>
+	<li>number of changes </li>
+	<li>number of change requests</li>
+	<li>number of failed changes</li>
+	<li>implementation of new services</li>
+	<li>current costs by service line</li>
+	<li>service hours</li>
+	<li>service locations</li>
+	<li>service skills</li>
+	<li>service contracts</li>
+	<li>number of service requests</li>
+	<li>number of break/fix</li>
+	<li>number of reports generated</li>
+	<li>number of ad hoc requests</li>
+	<li>capacity growth information</li>
+	<li>number of application bugs</li>
+	<li>number of systems by categories</li>
+	<li>number of applications by categories</li>
+</ul>
+This is not a complete list, but it should give you an idea of the information required. </p>
+
+<p>You will be building a mapping file that matches the kpi's to the services to define a current Service Level Object
+	<%=link_to image_tag("servicemapping3.png",:size => '450x320', alt: "service Mgt"  )%>	
+</p>
+
+
+<p class="center">
+	<%= link_to 'Service Overview', page_path('opsmgt')  %>
+	<%= link_to '', page_path('opsmgt'), class:"glyphicon glyphicon-chevron-left"  %>
+	<%= link_to '', page_path('servicediscovery'), class:"glyphicon glyphicon-chevron-right"  %>	
+	<%= link_to 'Service Planning', page_path('servicediscovery')  %>		
+	</p>
+				
+		
+<hr />
+	 
+	 
+	 
+	 
+	
+		
+
