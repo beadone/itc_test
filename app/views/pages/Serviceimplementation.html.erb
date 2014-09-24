@@ -5,7 +5,7 @@
 	
 	
 	<p>These pages will take you through the steps to <strong>generate a business case</strong> and move through the 
-		<%= link_to 'discovery phase', page_path('projmgtintiation') %>, the
+		<%= link_to 'discovery phase', page_path('servicediscovery') %>, the
 		<%= link_to 'planning phase', page_path('projmgtplanning') %>, the
 		<%= link_to 'building phase', page_path('projmgtexecution') %>, and the 
 		<%= link_to 'Close down/run phase', page_path('projmgtclosedown') %> 
@@ -31,6 +31,13 @@
 	<li>Proposed Project Governance</li>			
 </ul>
 	</p>
+<p>	
+	You can use the template below as a starting point</p>
+	<p>
+	<%= link_to "Business Case Template", pdf_path('Business case template.pdf')  %>
+	</p>
+	
+	
 <h4>Business Goals<a name="Business Goals" id="Business Goals"></a></h4>
 <p>The first step is to compare the current IT services and service levels to business expectations. 
 	If you do not have a set of IT business goals matched to the business plan, then the following will constitute your first set of actions
@@ -136,7 +143,7 @@ You may have information such as
 </ul>
 This is not a complete list, but it should give you an idea of the information required. </p>
 
-<p>You will be building a mapping file that matches the kpi's to the services to define a current Service Level Object
+<p>You will be building a mapping file that matches the kpi's to the services to define a current Service Level Object.
 	<%=link_to image_tag("servicemapping3.png",:size => '450x320', alt: "service Mgt"  )%>	
 </p>
 
