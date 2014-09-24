@@ -4,15 +4,22 @@
 	<%= link_to image_tag("knowlegebasesymbol3.png",:size => '150x60', alt: "Service Management"  ), page_path('opsmgt'),class: 'pull-left' %> 
 	
 	
-	<p>These pages will take you through the steps to <strong>generate a business case</strong> and move through the 
-		<%= link_to 'discovery phase', page_path('servicediscovery') %>, the
-		<%= link_to 'planning phase', page_path('projmgtplanning') %>, the
+	<p>These pages will take you through the steps to <strong>generate a business case</strong> (Discovery Phase) and move through the 
+
+		<%= link_to 'planning phase', page_path('serviceplanning') %>, the
 		<%= link_to 'building phase', page_path('projmgtexecution') %>, and the 
 		<%= link_to 'Close down/run phase', page_path('projmgtclosedown') %> 
-		 of your project. </p> 
+		 of your Service Implementation Project. </p> 
 		 
 <p>
 			<%=link_to image_tag("opscyclegovern2.png",:size => '450x320', alt: "service Mgt"  )%> 
+			
+</p>
+
+<p>During the Discovery Phase you will build a business case. Below is the high level set of steps you will go through</p>
+
+<p>
+			<%=link_to image_tag("ServicesBCoverview.png",:size => '450x320', alt: "service Mgt"  )%> 
 			
 </p>
 
@@ -143,16 +150,46 @@ You may have information such as
 </ul>
 This is not a complete list, but it should give you an idea of the information required. </p>
 
-<p>You will be building a mapping file that matches the kpi's to the services to define a current Service Level Object.
+<p>You will be building a mapping file that matches the kpi's to the services to define a current Service Level Object. You need to avoid getting into detailed 
+	analysis as this will occur in the planning planning phase. You are looking to complete a high level service catelogue to which you can compare to
+	business expectations.
 	<%=link_to image_tag("servicemapping3.png",:size => '450x320', alt: "service Mgt"  )%>	
 </p>
 
+<h3>High Level Gap Analysis</h3>
+<p> 
+	During this process you will map the current services and the Service Level Objectives to business requirements and expectations and define any gaps.
+	You will estimate the effort and cost to make changes to processes and tools and to train people to remove the gaps.
+	You will use the current draft catelogue, business goals and requirements and issues lists as inputs to the process.
+	This will provide the scope and cost of the Service Improvement Project (SIP) you are intending to run.
+	</p>
+<p>An example spreadsheet below demonstrates the information you need to collate and analyse.</p>
+
+	<%=link_to image_tag("servicesgap1.png",:size => '900x320', alt: "service Mgt" )%>	
+
+
+<p>	
+	You can download the spreadsheet template below in either Microsoft format or Opensource</p>
+	<p>
+	<%= link_to "Service Gap Template (Excel)", pdf_path('servicesgap1.xlsx')  %>
+	</p>
+	<p>
+	<%= link_to "Service Gap Template (LibreOffice)", pdf_path('Service Management Gap Analysis.ods')  %>
+	</p>
+<p>You may have to revisit the business stakeholders to confirm some requirements as they maybe high level or not articulated at all.</p>
+
+<h3>Complete the Business Case</h3>
+<p> From the Gap Analysis you should be able to complete the <%= link_to "Business Case Template", pdf_path('Business case template.pdf')  %>.
+You will have to summarise the findings and work with your finance team to present the information in the companies expected format.
+</p>
+<p>Once your business case is approved, you will move to the planning phase where you will produce the detail plans required to change people, process and tools to meet
+	the agreed scope of the business case.</p>
 
 <p class="center">
 	<%= link_to 'Service Overview', page_path('opsmgt')  %>
 	<%= link_to '', page_path('opsmgt'), class:"glyphicon glyphicon-chevron-left"  %>
-	<%= link_to '', page_path('servicediscovery'), class:"glyphicon glyphicon-chevron-right"  %>	
-	<%= link_to 'Service Planning', page_path('servicediscovery')  %>		
+	<%= link_to '', page_path('serviceplanning'), class:"glyphicon glyphicon-chevron-right"  %>	
+	<%= link_to 'Service Planning', page_path('serviceplanning')  %>		
 	</p>
 				
 		
