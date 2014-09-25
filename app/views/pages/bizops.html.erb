@@ -4,16 +4,26 @@
 	While you will find most elements of Governance in Service Management (ITIL) and in Project Management (PMBOK) and COBIT.
 	The practical implementation of governance occurs in the Business Management processes and functions.
 </p>
-<hr />
+<p>The aim is to show executives how to work with a framework to deliver business performance using a set of controls for stakeholders who hold them accountable.</p>
+
+
 <p>
-	The diagram below illustrates the high level integration of the IT Processes
+	<%= image_tag("Governance1.png",:size => '450x320', alt: "IT Mgt" ) %>
+</p>
+<p>You may note that if you have probelms with you controls (Service Management not working, Project Management not working) or your framework (Business and IT goals not aligned) then
+	you will need to run a <%= link_to ' Business Management Remediation Program', page_path('bizopsprocess')  %>.</p>
+
+
+<p>
+	The diagram below illustrates the high level integration of the 3 main IT Management Framworks, Service Management, Project Management and Business Management. It leaves out the shared functions of
+	Finance, HR and Vendor Management.
 </p>
 <p>
 	<%= image_tag("SM and proj 2b.png",:size => '450x320', alt: "IT Mgt" ) %>
 </p>
 <div class="padp'">	
 <p>
-	Business Management revolves around 4 main functions 
+	Business Management revolves around 4 main activities 
 	 <strong> 
 	 	<ul>
 		<li>Planning</li>
@@ -23,7 +33,7 @@
 	</ul></strong> </p>
 
 <p>
-	These activities are carried out over <strong> 7 business areas</strong>
+	These activities are carried out over <strong> 7 business management areas</strong> that make up the Management Framework.
 </p>
 <div class="container">
 <div class="opsmgt ">
@@ -59,7 +69,7 @@
 </div> <!-- padp -->
 </div> <!-- container -->
 <p>
-	The table below describes the processes that run across the IT business areas in the 4 function categories.
+	The table below describes the processes that run across the IT business areas in the 4 categories.
 </p>
 
 <div class="row">
@@ -90,11 +100,11 @@
 		<li>
 			Target Setting and Distribution
 		</li>
-	</div>
-	<div class="col-md-3 col-md-offset-6 ">
 		<li>
 			Productivity/Efficiency Planning
 		</li>
+
+
 	</div>
 </div>
 <!--row 2 -->
@@ -111,6 +121,7 @@
 		<li>
 			Productivity/Efficiency Progress
 		</li>
+		
 	</div>
 </div>
 <!--row  3-->
@@ -128,6 +139,7 @@
 		<li>
 			Productivity/Efficiency Progress
 		</li>
+
 	</div>
 </div>
 <!--row 4 -->
@@ -144,6 +156,7 @@
 		<li>
 			Off Efficiency Target Remediation
 		</li>
+
 	</div>
 </div>
 <!--row  5-->
@@ -169,6 +182,7 @@
 		<li>
 			Productivity/Efficiency Planning
 		</li>
+
 	</div>
 </div>
 <!--row 6 -->
@@ -237,15 +251,14 @@
 		<li>
 			Business Goal Distribution
 		</li>
-	</div>
-	<div class="col-md-3 col-md-offset-6 ">
 		<li>
 			Program Management Framework
 		</li>
-	</div>
-	<div class="col-md-3 col-md-offset-6 ">
 		<li>
 			Business Stakeholder Management
+		</li>
+		<li>
+			Audit Planning
 		</li>
 	</div>
 </div>
@@ -263,6 +276,9 @@
 		<li>
 			Change Management Summary
 		</li>
+		<li>
+			Audit Compliance
+		</li>
 	</div>
 </div>
 <!--row  3-->
@@ -279,10 +295,11 @@
 		<li>
 			Change Management
 		</li>
-	</div>
-	<div class="col-md-3 col-md-offset-6 ">
 		<li>
 			Project Management Performance
+		</li>
+		<li>
+			Audit Compliance
 		</li>
 	</div>
 </div>
@@ -299,6 +316,9 @@
 	<div class="col-md-3 col-md-offset-6 ">
 		<li>
 			Business Change Management
+		</li>
+		<li>
+			Overdue Audit Issues
 		</li>
 	</div>
 </div>
@@ -320,15 +340,14 @@
 		<li>
 			Business Capacity Planning Distribution
 		</li>
-	</div>
-	<div class="col-md-3 col-md-offset-6 ">
 		<li>
 			Stakeholder Management
 		</li>
-	</div>
-	<div class="col-md-3 col-md-offset-6 ">
 		<li>
 			Service Level Re-evaluation
+		</li>
+		<li>
+			Audit Planning
 		</li>
 	</div>
 </div>
@@ -346,6 +365,9 @@
 		<li>
 			Customer Satisfaction
 		</li>
+		<li>
+			Audit Compliance
+		</li>
 	</div>
 </div>
 <!--row  3-->
@@ -362,15 +384,14 @@
 		<li>
 			Customer Satisfaction
 		</li>
-	</div>
-	<div class="col-md-3 col-md-offset-6 ">
 		<li>
 			Business Change Management
 		</li>
-	</div>
-	<div class="col-md-3 col-md-offset-6 ">
 		<li>
 			Service Management Performance
+		</li>
+		<li>
+			Audit Compliance
 		</li>
 	</div>
 </div>
@@ -387,6 +408,9 @@
 	<div class="col-md-3 col-md-offset-6 ">
 		<li>
 			Business Capacity Management Review
+		</li>
+		<li>
+			Overdue Audit Issues
 		</li>
 	</div>
 </div>
@@ -532,35 +556,27 @@
 		<li>
 			Business Goal Translation
 		</li>
-	</div>
-	<div class="col-md-3 col-md-offset-6 ">
 		<li>
 			Strategic Planning
 		</li>
-	</div>
-	<div class="col-md-3 col-md-offset-6 ">
+
 		<li>
 			Stakeholder Management
 		</li>
-	</div>
-	<div class="col-md-3 col-md-offset-6 ">
 		<li>
 			Process Re-engineering
 		</li>
-	</div>
-	<div class="col-md-3 col-md-offset-6 ">
 		<li>
 			Communication Planning
 		</li>
-	</div>
-	<div class="col-md-3 col-md-offset-6 ">
 		<li>
 			Workforce Planning
 		</li>
-	</div>
-	<div class="col-md-3 col-md-offset-6 ">
 		<li>
 			Customer Engagement
+		</li>
+		<li>
+			Audit Planning
 		</li>
 	</div>
 </div>
@@ -578,10 +594,11 @@
 		<li>
 			Roadmaps - Actual to Plan
 		</li>
-	</div>
-	<div class="col-md-3 col-md-offset-6 ">
 		<li>
 			Technology Reviews
+		</li>
+		<li>
+			Audit Compliance
 		</li>
 	</div>
 
@@ -600,10 +617,11 @@
 		<li>
 			Roadmaps - Actual to Plan
 		</li>
-	</div>
-	<div class="col-md-3 col-md-offset-6 ">
 		<li>
 			Technology Trends
+		</li>
+		<li>
+			Audit Compliance
 		</li>
 	</div>
 </div>
@@ -621,10 +639,11 @@
 		<li>
 			Off Road Map Target Remediation
 		</li>
-	</div>
-	<div class="col-md-3 col-md-offset-6 ">
 		<li>
 			Business Change Management
+		</li>
+		<li>
+			Overdue Audit Issues
 		</li>
 	</div>
 </div>
@@ -646,23 +665,15 @@
 		<li>
 			Cost Review and Target Setting
 		</li>
-	</div>
-	<div class="col-md-3 col-md-offset-6 ">
 		<li>
 			Productivity/Efficiency Planning
 		</li>
-	</div>
-	<div class="col-md-3 col-md-offset-6 ">
 		<li>
 			Industry Trends
 		</li>
-	</div>
-	<div class="col-md-3 col-md-offset-6 ">
 		<li>
 			Business Alignment Review
 		</li>
-	</div>
-	<div class="col-md-3 col-md-offset-6 ">
 		<li>
 			Strategic Partnering Planning
 		</li>
@@ -700,8 +711,6 @@
 		<li>
 			Service Attainment
 		</li>
-	</div>
-	<div class="col-md-3 col-md-offset-6  ">
 		<li>
 			Cost and Volumes
 		</li>
