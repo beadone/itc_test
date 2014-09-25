@@ -9,10 +9,10 @@
 		<%= link_to 'planning phase', page_path('serviceplanning') %>, the
 		<%= link_to 'building phase', page_path('projmgtexecution') %>, and the 
 		<%= link_to 'Close down/run phase', page_path('projmgtclosedown') %> 
-		 of your Service Implementation Project. </p> 
+		 of your Service Implementation Project. If you want to understand how this process links to ITIL and PMBOK click  <%= link_to 'here', page_path('bizopsprocess') %></p> 
 		 
 <p>
-			<%=link_to image_tag("opscyclegovern2.png",:size => '450x320', alt: "service Mgt"  )%> 
+			<%=link_to image_tag("opscyclegovern2.png",:size => '450x320', alt: "service Mgt"  ), page_path('bizopsprocess')%> 
 			
 </p>
 
@@ -22,7 +22,7 @@
 			<%=link_to image_tag("ServicesBCoverview.png",:size => '450x320', alt: "service Mgt"  )%> 
 			
 </p>
-<p>You may extend the discovery to Best Practice Reviews as well. This depends on the time and money your company has to complete this project. I am assuming that the business goals include
+<p>You may extend the discovery to Best Practice and Technology Reviews as well. Your decision will depend on the time and money your company has to complete this project. I am assuming that the business goals include
 	any new services as well as current services.</p>
 
 <h3>Building the Business Case</h3>
@@ -32,10 +32,10 @@
 <ul>
 	<li>Agreed IT Business Goals </li>
 	<li>Current IT Baseline</li>	
-	<li>High level gap analysis - Baseline to goals</li>	
+	<li>High level gap analysis - Baseline to Goals</li>	
 	<li>Proposed Scope and Benefits</li>
-	<li>High Level Cost Estimate</li>	
-	<li>High Level Risk Assessment</li>	
+	<li>Cost Estimate</li>	
+	<li>Risk Assessment</li>	
 	<li>High Level Plan with Milestones</li>
 	<li>Proposed Project Governance</li>			
 </ul>
@@ -58,8 +58,20 @@
 	<li>Present Goals to Executive Management for review and approval</li>
 	<li>Publish Goals</li>			
 </ul>
+<p>Below is an example of how IT goals are mapped to business goals</p>
+<p>
+<%=link_to image_tag("goalmapping1.png",:size => '1200x320', alt: "service Mgt"  )%>
+</p>
+<p>	
+	You can downoad a template below in either Excel or LibreOffice format</p>
+	<p>
+	<%= link_to "Goal Mapping (excel)", pdf_path('Goalmapping1.xlsx')  %> </p><p> 
+	<%= link_to "Goal Mapping (libroffice)", pdf_path('Goalmapping1.ods')  %>
+		
+	</p>
 
-<p>You should now have a set of agreed business goals. While you are in discovery (listerning) mode, you should not limit any business requirements. You will prioritise 
+<p>You should now have a set of agreed business goals. </p> 
+<p>While you are in discovery (listerning) mode, you should not limit any business requirements. You will prioritise 
 	and cost these requirements in later steps and present them back in the business case for a business decision. 
 	This step is part of creating your <strong>Service Pipeline</strong> and building your <strong>Service Catalogue</strong></p>
 	
@@ -107,17 +119,19 @@
 </ul>			
 		</p> 
 <p>You will have to balance the need to an create accurate detailed map of the current services with time and cost constraints of completing the business case. 
-	The more detailed you are, the more accurate the gap analysis will be but put you at risk of analysis paralysis. You may need the 
-	services of an experienced Service Manager at this point. To complete this step and the gap analysis is a difficult task requiring expert knowledge
+	The more detailed you are, the more accurate the gap analysis will be but this will put you at risk of analysis paralysis. </p>
+	<p>You may need the 
+	services of an experienced Service Manager at this point. 
+	 To complete this step and the gap analysis is a difficult task requiring expert knowledge
 	and some well defined templates in order to complete in a resonable time.</p>
-
+<h4>Mapping IT Structures to Services</h4>
 <p>Next you need to map the applications, infrastructure and technical support to the plan. This will show how the physical environment supports the services</p>
 
 <p>Your mapping is starting to look like
 		<%=link_to image_tag("servicemapping2.png",:size => '450x320', alt: "service Mgt"  )%></p>	
 
 <p> As you move through this process, you will be building the skeleton of 
-you configuration management database (CMDB) and of your Configuration Items (CIs).
+you <%= link_to  ' Configuration Management System (CMDB) ', page_path('serviceCMDB' )%>and of your <%= link_to  'Configuration Items (CIs)', page_path('serviceCI' )%>.
 	<%=link_to image_tag("serviceportfolio2.png",:size => '450x320', alt: "service Mgt"  )%>	
 	 </p>	
 	 
@@ -152,8 +166,8 @@ You may have information such as
 </ul>
 This is not a complete list, but it should give you an idea of the information required. </p>
 
-<p>You will be building a mapping file that matches the kpi's to the services to define a current Service Level Object. You need to avoid getting into detailed 
-	analysis as this will occur in the planning planning phase. You are looking to complete a high level service catelogue to which you can compare to
+<p>You will be building a mapping file that matches the kpi's to the services to define a current Service Level Objective. You need to avoid getting into detailed 
+	analysis as this will occur in the planning phase. You are looking to complete a high level service catelogue to which you can compare to
 	business expectations.
 	<%=link_to image_tag("servicemapping3.png",:size => '450x320', alt: "service Mgt"  )%>	
 </p>

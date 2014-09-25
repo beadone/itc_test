@@ -1,0 +1,67 @@
+<% content_for :title do %>Service Management Implementation Configuration Items<% end %>
+<h1><i class="glyphicon glyphicon-refresh"></i>Service Management - Configuration Item</h1>
+
+	<%= link_to image_tag("plansymbol.png",:size => '150x60', alt: "Service Management"  ), page_path('opsmgt'),class: 'pull-left' %> 
+	<div class='container'>
+	<div class='padp'>
+<blockquote> 	
+<p> <strong>Configuration Items</strong> (CI) (ITILv3):    [Service Transition] Any Component that needs to be managed in order to deliver an IT Service. Information about each CI is recorded in a 
+	Configuration Record within the Configuration Management System and is maintained throughout its Lifecycle by Configuration Management.</p><p>
+	 CIs are under the control of Change Management. </p><p>
+	 	CIs typically include IT Services, hardware, software, buildings, people and formal documentation such as Process documentation and SLAs.
+	
+	</p></blockquote></div>
+	
+	<p>A simple view of data that you typically record in a CMS about a Configuration Item is
+		
+		<ul>			
+		<li>Identifier (Asset Number) </li>
+       <li> Name</li>
+       <li> Description</li>
+       <li> CI owner</li>
+       <li> CI type</li>
+       <li> Manufacturer information
+       	<ul>
+       		<li>Serial Number</li>
+       	<li>	Product Type</li>
+       	<li>	Manufacture Name</li>
+       	</ul></li>
+       <li> Version information</li>
+       <li> Location
+       	<ul>
+       		<li>Physical</li>
+       		<li>Logical</li>
+       		</ul>
+       	</li>
+      <li>  Modification history of the CI Record
+      	<ul>
+      		<li>Date of Creation</li>
+      		<li>Modifications</li>
+      	</ul>
+      	</li>
+       <li> Status history</li>
+             	<ul>
+      		<li>Current Status</li>
+      		<li>Modifications</li>
+      	</ul>
+       <li> Relationships to other CIs</li>
+             	<ul>
+      		<li>Parent Asset</li>
+      		<li>Child Assets</li>
+      	</ul>
+       <li> Licensing information</li>
+        <li>Document references	
+			      	<ul>
+      		<li>Contractual</li>
+      		<li>Operating</li>
+      		<li>User</li>
+      		<li>Business Recovery</li>
+      		<li>Other</li>
+      	</ul>        
+        	</li>		
+	</ul>	
+	</p>
+	
+	
+	
+	</div>
