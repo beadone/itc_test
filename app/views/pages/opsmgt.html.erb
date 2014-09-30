@@ -11,7 +11,7 @@
 		</p>
 	</blockquote>
 	
-<p>	Itil version 3 introduces a more complete set of functions that integrates into the whole of IT 	
+<p>	Itil version 3 introduces a more complete set of IT functions to become a Service Lifecycle.	
 <%= link_to image_tag("itiloverview1.png",:size => '650x750', alt: "Service Management"  ), page_path('opsmgt') %></p>	
 	
 	
@@ -22,6 +22,7 @@
 		
 		
 	</p>
+	<h3>Adopt and Adapt</h3>
 	<p>
 		You can use a simple 3 pronged approach focusing on <strong>People, Process and Tools</strong>  and work your way through a maturing process to achieve your goal.
 
@@ -33,9 +34,7 @@
 <div class="opsmgt">
 	<div class="span3">
 		<table class="table table-condensed table-hover">
-			<caption>
-				<h3>Approach</h3>
-			</caption>
+
 			<thead>
 				<tr>
 					<th><h3>Focus</h3></th>
@@ -48,13 +47,14 @@
 					<td>Education in and roll out of Service Management</td>
 				</tr>
 				<tr>
+					<td>Process</td>
+					<td>A new process wrapped around the tool used by a trained team </td>
+				</tr>				
+				<tr>
 					<td>Tools</td>
 					<td>Use of an ITIL compliant tool set</td>
 				</tr>
-				<tr>
-					<td>Process</td>
-					<td>A new process wrapped around the tool used by a trained team </td>
-				</tr>
+
 			</tbody>
 
 		</table>
@@ -62,9 +62,16 @@
 	</div>
 </div>
 <p>
-	The change is to move the team to a service based culture through training, leadership and advocacy,
-	implement an ITIL compliant management tool and wrap a process around the tool that supports ITIL
-	to gain the first level of benefits of good service management espoused by ITIL aficionados.
+	The change is to move the team to 
+	
+	<ul>
+		<li>a service based culture through training, leadership and advocacy,</li>
+		<li>implement an ITIL compliant management tool and</li>
+		<li>wrap a process around the tool that supports ITIL</li>
+	</ul>
+	
+	 
+	defined by a business case to gain the first level of benefits of good service management espoused by ITIL aficionados.
 </p>
 
 <p>
@@ -171,13 +178,14 @@
 	The HP IT Service Management Reference Model white paper
 </div>
 
-<h2> <%= link_to 'Implementing Service Management', page_path('Serviceimplementation') %> </h2>
+<h2> <%= link_to 'Adopting Service Management', page_path('Serviceimplementation') %> </h2>
 
 <p>Below is an example of a generic high level Service Management Implementation Plan. It is very high level and does not contain the interdependancies. I.e. you need to define and 
-	document the services and processes before you can complete the configuration of the tool and train the teams. You will most likely use a staged approach focusing on the major services first.</p>
+	document the services and processes before you can complete the configuration of the tool and train the teams. You will most likely use a staged approach focusing on the major services first
+	that gives the most benefit to the business as defined in a business case.</p>
 
 <p>	It will run like any other project and you are encouraged to follow standard project management processes.
-	Follow the link <%= link_to 'link', page_path('Serviceimplementation') %> to find out the next level of detail. 
+	Follow the <%= link_to 'link', page_path('Serviceimplementation') %> to find out the next level of detail. 
 
 <%= link_to image_tag("SeviceImp1.png",:size => '450x600', alt: "Service Management"  ), page_path('Serviceimplementation'),class: 'pull-left' %>
 

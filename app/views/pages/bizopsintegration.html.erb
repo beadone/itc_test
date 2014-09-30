@@ -1,0 +1,76 @@
+<% content_for :title do %>Business Management Integration<% end %>
+<h1><i class="glyphicon glyphicon-info-sign"></i>IT Business Management Integration</h1>
+<p>
+			<%= link_to image_tag("discoversymbol.png", :size => '50x50',alt: "Ops mgt"), page_path('bizops'),class: 'pull-left' %>  
+			
+</p>
+<div class ='container padp'> 
+	<p>In order to bring the separate disciples of project management and service management together under the governance of business management we will move to a 
+		common terminology, Discover, Plan, Build, Run and Govern. It is a <strong>Keep It Simple (KIS)</strong> approach. This will drive integration of process across the Organisation.
+		
+		
+		
+	</p> </div>
+	
+
+<%=link_to image_tag("opscyclegovern2.png",:size => '450x320', alt: "Project Mgt"  )%>
+<div class="container">
+<p>The methodologies all have a cyclic approach and at a high level fit into these categories. Fine tuning is done at the detailed level.</p>
+
+<p>Below is how the phases of the ITIL, PMBOK methodologies line up at the highest level</p>
+
+<div class="row">
+  <div class="col-md-3 "><strong>KIS</strong></div>
+    <div class="col-md-3 "><strong>ITIL</strong></div>
+      <div class="col-md-3 "><strong>PMBOK</strong></div>
+</div> <!--row 1 -->
+
+<div class="row">
+  <div class="col-md-3 rowborder">Discover</div>
+  <div class="col-md-3 rowborder">Service Strategy</div>
+  <div class="col-md-3 rowborder">Initiation</div>     
+</div> <!--row 2 -->
+<div class="row">
+  <div class="col-md-3 rowborder">Plan</div>
+  <div class="col-md-3 rowborder">Service Design</div>
+  <div class="col-md-3 rowborder">Planning</div>     
+</div> <!--row 3 -->
+<div class="row">
+  <div class="col-md-3 rowborder">Build</div>
+  <div class="col-md-3 rowborder">Service Transition</div>
+  <div class="col-md-3 rowborder">Execution</div>     
+</div> <!--row 4 -->
+<div class="row">
+  <div class="col-md-3 rowborder">Run</div>
+  <div class="col-md-3 rowborder">Service Operation</div>
+  <div class="col-md-3 rowborder">Execution and Close</div>     
+</div> <!--row 5 -->
+<div class="row">
+  <div class="col-md-3 rowborder">Govern</div>
+  <div class="col-md-3 rowborder">Continuous Improvement</div>
+  <div class="col-md-3 rowborder">Monitor and Control</div>     
+</div> <!--row 6 -->
+
+
+	<h2>A High Level Integrated View of an IT Division</h2>
+	<p>
+		To successfully run an IT division, you must have a sound integrated approach to management.
+	</p>
+
+	<p>
+		Using 3 main divisions of process and function <%= link_to "Service Management", page_path('opsmgt') %>,
+		<%= link_to "Project Management ", page_path('projmgt') %> and
+		<%= link_to "Business Management ", page_path('bizops') %>, an IT department can run quite successfully.
+	</p>
+	<%= image_tag("SM and proj 2b.png",:size => '450x320', alt: "IT Mgt"  )%>
+
+	<p>
+		 <%= link_to "Project Management ", page_path('projmgt') %>
+		and  <%= link_to "Service Management ", page_path('opsmgt') %>
+		are well defined and implementing a tailored process should be relatively simple given a positive
+		focus by the business. IT Business Managment is not defined generally and hence can take many shapes. The <%= link_to "Business Management ", page_path('bizops') %> page provides
+		a functional view and will link these functions to Project and Service Management to give an overall integrated approach.
+	</p>
+</div>
+	
+<p></p>
