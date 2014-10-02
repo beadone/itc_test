@@ -1,11 +1,11 @@
-<% content_for :title do %>Service Management Implementation<% end %>
+<% content_for :title do %>Service Management Build<% end %>
 	<p class="center">
-	<%= link_to 'Service Review', page_path('Serviceimplementation')  %>
-	<%= link_to '', page_path('Serviceimplementation'), class:"glyphicon glyphicon-chevron-left"  %>
-	<%= link_to '', page_path('servicebuild'), class:"glyphicon glyphicon-chevron-right"  %>	
-	<%= link_to 'Service Build', page_path('servicebuild')  %>		
+	<%= link_to 'Service Planning', page_path('serviceplanning')  %>
+	<%= link_to '', page_path('serviceplanning'), class:"glyphicon glyphicon-chevron-left"  %>
+	<%= link_to '', page_path('servicerun'), class:"glyphicon glyphicon-chevron-right"  %>	
+	<%= link_to 'Service Run', page_path('servicerun')  %>		
 	</p>
-<h1><i class="glyphicon glyphicon-refresh"></i>Service Implementation - Planning Phase</h1>
+<h1><i class="glyphicon glyphicon-refresh"></i>Service Implementation - Build Phase</h1>
 
 	<%= link_to image_tag("plansymbol.png",:size => '150x60', alt: "Service Management"  ), page_path('opsmgt'),class: 'pull-left' %> 
 
@@ -20,11 +20,10 @@
 		</div>
 			<p>As you move through this phase, you will be completing a 
 			<%= link_to "Service Design Package", pdf_path('Service Design Package Draft Example.pdf')  %>. It is an extension of the Service Catalogue you have been creating.
-			It includes the other fuctional areas that are to be considered when remediating or defining a service. You now need to look at items such as Backup and Recovery, Business Continuity Planning, 
-			Security, Vendors, Availability, Service Levels. 
-			Some of this you will have done, but you now need to complete the work to cover off all the gaps identified in the business case.</p>
+			It includes the other fuctional areas that to be considered when remediating or defining a service. You now need to look at items such as Backup and Recovery, Business Continuity Planning, Security
+			Vendors, Availability, Service Levels. Some of this you will have done, but you now need to complete the work to cover off all the gaps identified in the business case.</p>
 			
-		<p>As you work through the process you may find other issues with services that are currently not in the business case. E.g you find a backup and recovery process does not meet a current SLA.
+		<p>You may find other issues with services that are currently not in the business case. E.g you find a backup and recovery process does not meet a current SLA.
 			You should not just include this issue in the project, rather, you need to follow good project management and log the issue and ask for a scope change from the business who will then agree (or not) to
 			fund the work.</p>
 			
@@ -33,9 +32,22 @@
 			confirm that the system will manage the new cycles and can restore in the appropriate timeframes. For larger items such as Installing a new monitoring
 			system or capacity management server or a new tape backup system, you would produce a separate design document and refer to it in the Service Package document.</p>
 			
-			<p>The same would apply for addtional processes that maybe required to achieve business requirements. For example, you may need additional service desk processes. 
-				You would design these processes in a separate document and refer to the document in the service package. You may even implement the whole service package in a 
-				collaboration system such as SharePoint or Confluence.</p>
+			
+			<ul>
+				<li>Define the services that will meet the business requirements</li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				
+				
+				
+				
+			</ul>
+			
+			
+	Service Design Package Draft Example		
+			
 			
 
 		

@@ -1,4 +1,10 @@
-<% content_for :title do %>Service Management<% end %> <h1><i class="glyphicon glyphicon-refresh"></i>Service Management</h1>
+<% content_for :title do %>Service Management<% end %> 
+<p class="left">
+	<%= link_to '', page_path('Serviceimplementation'), class:"glyphicon glyphicon-chevron-right"  %>	
+	<%= link_to 'Service Implementation', page_path('Serviceimplementation')  %>		
+	</p>
+<h1><i class="glyphicon glyphicon-refresh"></i>Service Management</h1>
+
 
 <%= link_to image_tag("knowledgebase2.png",:size => '150x60', alt: "Service Management"  ), page_path('opsmgt'),class: 'pull-left' %>
 <div class="padp">
@@ -15,7 +21,7 @@
 <%= link_to image_tag("itiloverview1.png",:size => '650x750', alt: "Service Management"  ), page_path('opsmgt') %></p>	
 	
 	
-	<h4>How do you move to a Service Management Culture and Process?</h4>
+	<h3>Moving to a Service Management Culture and Process?</h3>
 	<p>
 		The CEO wants to see a change to a service based culture in IT but without any or little additional cost. How do you achieve this ?
 		The last time you looked at the 	<%= link_to  'ITIL', 'http://www.itil-officialsite.com/'%> based Service Management Process, it was over 500 pages of change.

@@ -1,9 +1,15 @@
 <% content_for :title do %>Service Management Implementation<% end %>
+	<p class="center">
+	<%= link_to 'Service Overview', page_path('opsmgt')  %>
+	<%= link_to '', page_path('opsmgt'), class:"glyphicon glyphicon-chevron-left"  %>
+	<%= link_to '', page_path('serviceplanning'), class:"glyphicon glyphicon-chevron-right"  %>	
+	<%= link_to 'Service Planning', page_path('serviceplanning')  %>		
+	</p>
 <h1><i class="glyphicon glyphicon-refresh"></i>Service Management Review</h1>
 
 	<%= link_to image_tag("knowlegebasesymbol3.png",:size => '150x60', alt: "Service Management"  ), page_path('opsmgt'),class: 'pull-left' %> 
 	
-	
+
 	<p>These pages will take you through a Service Management Review. </p>
 	<p>The process is run in 4 phases and adheres closley to a standard project methodology. We start with a discovery phase where the main output is a <strong>business case.</strong> </p>
 	
@@ -13,7 +19,7 @@
 		<%= link_to 'planning phase', page_path('serviceplanning') %>, a
 		<%= link_to 'building phase', page_path('projmgtexecution') %>, and a
 		<%= link_to 'Close down/run phase', page_path('projmgtclosedown') %> 
-		 of this Service Review/Implementation Project. If you want to understand how this process links to ITIL and PMBOK click  <%= link_to 'here', page_path('bizopsprocess') %></p> 
+		 of this Service Review/Implementation Project. If you want to understand how this process links to ITIL and PMBOK click  <%= link_to 'here', page_path('bizopsintegration') %></p> 
 		 
 <p>
 			<%=link_to image_tag("opscyclegovern2.png",:size => '450x320', alt: "service Mgt"  ), page_path('bizopsprocess')%> 
@@ -35,9 +41,9 @@
 
 <ul>
 	<li>Agreed IT Business Goals </li>
-	<li>Current IT Baseline</li>	
+	<li>Current IT Service Baseline</li>	
 	<li>High level gap analysis - Baseline to Goals</li>	
-	<li>Proposed Scope and Benefits</li>
+	<li>Proposed Service Improvement Scope and Benefits</li>
 	<li>Cost Estimate</li>	
 	<li>Risk Assessment</li>	
 	<li>High Level Plan with Milestones</li>
@@ -175,7 +181,17 @@ This is not a complete list, but it should give you an idea of the information r
 	business expectations.
 	<%=link_to image_tag("servicemapping3.png",:size => '450x320', alt: "service Mgt"  )%>	
 </p>
+<p> In the example above, you would be determining the overall Service Availability for this production service. If the application availability was completely reliant on the underlying infrastructure
+   then the Availability is the lowest value of the core infrastructure. E.g. if the servers and SAN where 99% uptime and the Network was 98%, then the overall availability is 98%.
+   The same process follows for reliability, the lowest reliability factor is the services kpi. When looking at response times and fix times, you will most likely involve your Service Desk and
+   support vendors. Some of these KPI's are additive, i.e. A fix time can be the addition of the Vendor Service level plus the Service Desk KPI for calling the vendor.
+   If you have  <%= link_to 'Lean Six Sigma', 'http://en.wikipedia.org/wiki/Lean_Six_Sigma'  %> experience, 
+   you can use the  <%= link_to 'Measure', 'http://www.isixsigma.com/new-to-six-sigma/dmaic/six-sigma-dmaic-roadmap/'  %> processes to achieve a result.</p>
+   
 
+
+   
+   
 <h3>High Level Gap Analysis</h3>
 <p> 
 	During this process you will map the current services and the Service Level Objectives to business requirements and expectations and define any gaps.
@@ -196,11 +212,14 @@ This is not a complete list, but it should give you an idea of the information r
 	<p>
 	<%= link_to "Service Gap Template (LibreOffice)", pdf_path('Service Management Gap Analysis.ods')  %>
 	</p>
-<p>You may have to revisit the business stakeholders to confirm some requirements as they maybe high level or not articulated at all.</p>
+<p>You may have to revisit the business stakeholders to confirm some requirements as they maybe high level or not articulated at all.
+	   If you have  <%= link_to 'Lean Six Sigma', 'http://en.wikipedia.org/wiki/Lean_Six_Sigma'  %> experience, 
+   you can use the  <%= link_to 'Analyze', 'http://www.isixsigma.com/new-to-six-sigma/dmaic/six-sigma-dmaic-roadmap/'  %> processes to achieve a result
+   for the more difficult gaps such as reducing fix times or response times.</p>
 
 <h3>Complete the Business Case</h3>
 <p> From the Gap Analysis you should be able to complete the <%= link_to "Business Case Template", pdf_path('Business case template.pdf')  %>.
-You will have to summarise the findings and work with your finance team to present the information in the companies expected format.
+You will have to summarise the findings and work with your finance team to present the information in your business's expected format.
 </p>
 <p>Once your business case is approved, you will move to the planning phase where you will produce the detail plans required to change people, process and tools to meet
 	the agreed scope of the business case.</p>
