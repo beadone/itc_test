@@ -13,7 +13,10 @@
 <div class = "container">
 	<div class = "padp">
 		<p>During this phase you will design the services that will meet the business requirements documented in the previous discovery phase and 
-			approved in the business case. ITIL presents Design in the following categories </p>
+			approved in the business case. At this point you should start to adhere to your companies project management framework. If you use an agile
+				framework like SCRUM, then the concept of the roadmap and the project plan are integrated and you can use a tool like 
+				<%= link_to 'OpenProject', page_path('openprojectimplementation') %> to carry out this activity otherwise follow the companies current framework. 
+				If you need a simple framework you can start  <%= link_to 'here', page_path('projmgt') %>. </p><p> ITIL presents Design in the following categories </p>
 		<hr />
 		<%= 	image_tag("servicedesign1.png",:size => '200x200', alt: "Service Management"  ) %>
 		<hr />
@@ -23,6 +26,7 @@
 			It includes the other fuctional areas that are to be considered when remediating or defining a service. You now need to look at items such as Backup and Recovery, Business Continuity Planning, 
 			Security, Vendors, Availability, Service Levels. 
 			Some of this you will have done, but you now need to complete the work to cover off all the gaps identified in the business case.</p>
+			
 			
 		<p>As you work through the process you may find other issues with services that are currently not in the business case. E.g you find a backup and recovery process does not meet a current SLA.
 			You should not just include this issue in the project, rather, you need to follow good project management and log the issue and ask for a scope change from the business who will then agree (or not) to
@@ -36,6 +40,7 @@
 			<p>The same would apply for addtional processes that maybe required to achieve business requirements. For example, you may need additional service desk processes. 
 				You would design these processes in a separate document and refer to the document in the service package. You may even implement the whole service package in a 
 				collaboration system such as SharePoint or Confluence.</p>
+			<p>You also need to update the roadmap which will summarise the project. </p>
 			
 
 		

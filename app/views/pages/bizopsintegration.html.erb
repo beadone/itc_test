@@ -17,50 +17,58 @@
 <div class="container">
 <p>The methodologies all have a cyclic approach and at a high level fit into these categories. Fine tuning is done at the detailed level.</p>
 
-<p>Below is how the phases of the ITIL, PMBOK methodologies line up at the highest level</p>
+<p>Below is how the phases of the 4 major change methodologies line up at the highest level</p>
 
 <div class="row">
-  <div class="col-md-3 "><strong>KIS</strong></div>
-    <div class="col-md-3 "><strong>ITIL</strong></div>
-      <div class="col-md-3 "><strong>PMBOK</strong></div>
-            <div class="col-md-3 "><strong>Lean Six Sigma</strong></div>
+  <div class="col-md-2 "><strong>KIS</strong></div>
+    <div class="col-md-2 "><strong>ITIL</strong></div>
+      <div class="col-md-2 "><strong>PMBOK</strong></div>
+      <div class="col-md-2 "><strong>COBIT</strong></div>
+            <div class="col-md-2 "><strong>Lean Six Sigma</strong></div>
 </div> <!--row 1 -->
 
 <div class="row">
-  <div class="col-md-3 rowborder">Discover</div>
-  <div class="col-md-3 rowborder">Service Strategy</div>
-  <div class="col-md-3 rowborder">Initiation</div> 
-    <div class="col-md-3 rowborder">Define, Measure, Analyse</div>     
+  <div class="col-md-2 rowborder">Discover</div>
+  <div class="col-md-2 rowborder">Service Strategy</div>
+  <div class="col-md-2 rowborder">Initiation</div> 
+    <div class="col-md-2 rowborder">Define Drivers, What are we now?, What do we want to be?</div>
+    <div class="col-md-2 rowborder">Define, Measure, Analyse</div>    
 </div> <!--row 2 -->
 <div class="row">
-  <div class="col-md-3 rowborder">Plan</div>
-  <div class="col-md-3 rowborder">Service Design</div>
-  <div class="col-md-3 rowborder">Planning</div> 
-    <div class="col-md-3 rowborder">Analyse, Improve</div>    
+  <div class="col-md-2 rowborder">Plan</div>
+  <div class="col-md-2 rowborder">Service Design</div>
+  <div class="col-md-2 rowborder">Planning</div> 
+    <div class="col-md-2 rowborder">What needs to be done?</div>    
+    <div class="col-md-2 rowborder">Analyse, Improve</div>
 </div> <!--row 3 -->
 <div class="row">
-  <div class="col-md-3 rowborder">Build</div>
-  <div class="col-md-3 rowborder">Service Transition</div>
-  <div class="col-md-3 rowborder">Execution</div>
-  <div class="col-md-3 rowborder">Improve, Control</div>      
+  <div class="col-md-2 rowborder">Build</div>
+  <div class="col-md-2 rowborder">Service Transition</div>
+  <div class="col-md-2 rowborder">Execution</div>
+  <div class="col-md-2 rowborder">How do we get there?</div> 
+  <div class="col-md-2 rowborder">Improve, Control</div>     
 </div> <!--row 4 -->
 <div class="row">
-  <div class="col-md-3 rowborder">Run</div>
-  <div class="col-md-3 rowborder">Service Operation</div>
-  <div class="col-md-3 rowborder">Execution and Close</div>
-  <div class="col-md-3 rowborder">Improve, Control</div>     
+  <div class="col-md-2 rowborder">Run</div>
+  <div class="col-md-2 rowborder">Service Operation</div>
+  <div class="col-md-2 rowborder">Execution and Close</div>
+  <div class="col-md-2 rowborder">Did we get there?</div>  
+  <div class="col-md-2 rowborder">Improve, Control</div>   
 </div> <!--row 5 -->
 <div class="row">
-  <div class="col-md-3 rowborder">Govern</div>
-  <div class="col-md-3 rowborder">Continuous Improvement</div>
-  <div class="col-md-3 rowborder">Monitor and Control</div>
-  <div class="col-md-3 rowborder">Control</div>     
+  <div class="col-md-2 rowborder">Govern</div>
+  <div class="col-md-2 rowborder">Continuous Improvement</div>
+  <div class="col-md-2 rowborder">Monitor and Control</div>
+  <div class="col-md-2 rowborder">How do we keep the momentum going?</div>  
+  <div class="col-md-2 rowborder">Control</div>   
 </div> <!--row 6 -->
 <hr />
-<p>While the ITIL and PMBOK align in a quite straight forward way and hence a project management proces lends itself to running a Service Improvement or Service Change initiative. The Lean Six Sigma approach
+<p>ITIL is very good at defining and running services but not as strong on the ay the projects should run so using a project management framework like PMBOK fixes that issue nicely. Both are poor at
+	IT governance. You need to extract the ILIL and PMBOK processes you need to govern out of the frameworks and integrate them into your process. COBIT is great at governance and IT processes in general but
+	it is extremely complex and needs a lot of modification to work in small and medium business The Lean Six Sigma approach
 	to business issues and requirements focuses more on analysis/problem solving and time management and is open ended 
 	but the Define, Measure, Analyze, Improve, Control processes are very useful in the first 3 phases of ITIL. 
-	They provide less guidance on the implementation and handover processes.</p>
+	lean six sigma provides less guidance on the implementation and handover processes so PMBOK should be used.</p>
 	
 	<h2>A High Level Integrated View of an IT Division</h2>
 	<p>
@@ -78,7 +86,12 @@
 		 <%= link_to "Project Management ", page_path('projmgt') %>
 		and  <%= link_to "Service Management ", page_path('opsmgt') %>
 		are well defined and implementing a tailored process should be relatively simple given a positive
-		focus by the business. IT Business Managment is not defined generally and hence can take many shapes. The <%= link_to "Business Management ", page_path('bizops') %> page provides
+		focus by the business. IT Business Managment is not defined generally and hence can take many shapes. The COBIT standard is the cloest to
+		a useful framwork but is extremely complex. 
+		There is a new framework emerging called  the <%= link_to  'OBASHI', 'http://en.wikipedia.org/wiki/OBASHI'%> framework  
+		- Ownership, Business process, Applications, System, Hardware, and Infrastructure (OBASHI). It provides a logical way for IT to map its current mode of operation and it fits into ITIL and COBIT.
+		
+		 The <%= link_to "Business Management ", page_path('bizops') %> page provides
 		a functional view and will link these functions to Project and Service Management to give an overall integrated approach.
 	</p>
 </div>

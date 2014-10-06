@@ -2,55 +2,94 @@
 	<p class="center">
 	<%= link_to 'Business Operations', page_path('Bizops')  %>
 	<%= link_to '', page_path('bizops'), class:"glyphicon glyphicon-chevron-left"  %>
-	<%= link_to '', page_path('servicerun'), class:"glyphicon glyphicon-chevron-right"  %>	
-	<%= link_to 'Service Run', page_path('servicerun')  %>		
+	<%= link_to '', page_path('cobitprocesses'), class:"glyphicon glyphicon-chevron-right"  %>	
+	<%= link_to 'COBIT Processes', page_path('cobitprocesses')  %>		
 	</p>
 <h1><i class="glyphicon glyphicon-refresh"></i>COBIT  Introduction</h1>
 
 	<%= link_to image_tag("plansymbol.png",:size => '150x60', alt: "Service Management"  ), page_path('opsmgt'),class: 'pull-left' %> 
+	
+	<div id='padp3'>
+	<blockquote >
+				<p>COBIT stands for Control Objectives for Information and Related Technology. </p>
+		<p>COBIT 5: Helps enterprises create optimal value from IT by maintaining a balance between realising benefits and optimising risk levels and resource use.
+			</p>
+			 <p>COBIT 5 brings together the <strong>five principles </strong> that allow the organizations to build an effective governance and management 
+					framework based on a holistic set of <strong>seven enablers</strong>  that optimizes technology investment and use for the benefit of stakeholders using <strong>37 processes</strong> .
+		</p>
+	</blockquote>
+	</div>
+	
+	<p >Yes it is quite complex as it can be used to run the largest of enterprise IT organisations, but the approach will be familiar to most IT managers as COBIT 5 is
+		the culmination of 10 years of input from IT managers. The 5 principles are common sense and it is not a stretch to agree with them or remember them. </p>
+		<p>The 7 enablers are also very familar and most IT organisations manage their business using these categories.
+		 </p>
+	<p >The processes are where the rubber hits the road and while the high level approach is very familar...Discovery, Design, Build, Run, Monitor,
+		 like all frameworks, this will be packaged slightly differently. </p>
+	
+
+		
+	
+	
+	<%= link_to image_tag("cobit5priciples1.png",:size => '400x400', alt: "Cobit Principles"  ), 'http://www.isaca.org/Knowledge-Center/Blog/Lists/Posts/Post.aspx?ID=193',class: 'pull-left' %>	
+	<hr /><hr /><hr /><hr /><hr />
+	<div id='padp2'>
+	<p class = "padp"> The priciples provide the intent of the IT team and are key to linking the IT Executive and teams to the business as a whole. You should clearly communicate these to
+		the business and get feedback on them. </p>
+
+</div>
+		<hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr />
+		<p>The COBIT 5 framework describes 7 categories of enablers. These are the categories you use to manage the IT organisation. As you focus on any activity, it should be understood in the context of
+			these categories; 
+			</p>
+		
+		<hr />
+<%= link_to image_tag("cobit7enablers1.png",:size => '600x400', alt: "Service Management"  ), 'http://www.isaca.org/Knowledge-Center/Blog/Lists/Posts/Post.aspx?ID=193',class: 'pull-left' %>
+<hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr /><hr />
+
+    <li>Principles, policies and frameworks </li><p id='padp3'>are the vehicle to translate the desired behaviour into practical guidance for day-to-day. E.g. PMBOK is a framework you might use; </p>
+      
+  
+    <li>Processes </li><p id='padp3'>describe an organised set of practices and activities to achieve defined objectives and produce sets of outputs in support of achieving overall IT-related goals;</p>
+    <li>Organisational structures</li><p id='padp3'> are the key decision-making entities in the enterprise;</p>
+    <li>Culture, ethics and behaviour</li><p id='padp3'> of individuals and of the enterprise are success factors in governance and management activities;</p>
+    <li>Information</li><p id='padp3'> is required for keeping the organisation running and well governed, and at operational level information is often the key asset of the enterprise;</p>
+    <li>Service capabilities,</li><p id='padp3'> i.e. services, infrastructures and applications provide the enterprise with with information technology and services;</p>
+    <li>People, skills and competencies</li><p id='padp3'>are required for successful completion of all activities, and for making correct decisions and taking corrective actions</p>
+		
+		<hr />
 
 
-<div class = "container">
-	<div class = "padp">
-		<p>During this phase you will design the services that will meet the business requirements documented in the previous discovery phase and 
-			approved in the business case. ITIL presents Design in the following categories </p>
-		<hr />
-		<%= 	image_tag("servicedesign1.png",:size => '200x200', alt: "Service Management"  ) %>
-		<hr />
-		</div>
-			<p>As you move through this phase, you will be completing a 
-			<%= link_to "Service Design Package", pdf_path('Service Design Package Draft Example.pdf')  %>. It is an extension of the Service Catalogue you have been creating.
-			It includes the other fuctional areas that to be considered when remediating or defining a service. You now need to look at items such as Backup and Recovery, Business Continuity Planning, Security
-			Vendors, Availability, Service Levels. Some of this you will have done, but you now need to complete the work to cover off all the gaps identified in the business case.</p>
-			
-		<p>You may find other issues with services that are currently not in the business case. E.g you find a backup and recovery process does not meet a current SLA.
-			You should not just include this issue in the project, rather, you need to follow good project management and log the issue and ask for a scope change from the business who will then agree (or not) to
-			fund the work.</p>
-			
-		<p>At the end of this step you will have a Service Design Package that lists all the services and how they meet the customers requirements or a set of tasks to get to the required level.
-			E.g. If a Backup Cycle does not meet Requirements, the entry will have a task to "Reconfigure Backs to new schedule" and the schedule listed. It may also have a capacity management task to 
-			confirm that the system will manage the new cycles and can restore in the appropriate timeframes. For larger items such as Installing a new monitoring
-			system or capacity management server or a new tape backup system, you would produce a separate design document and refer to it in the Service Package document.</p>
-			
-			
-			<ul>
-				<li>Define the services that will meet the business requirements</li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				
-				
-				
-				
-			</ul>
-			
-			
-	Service Design Package Draft Example		
-			
+<p><h3>COBIT Processes</h3></p>	<p>
+The COBIT 5 processes are split into governance and management. </p> 	
+<%= link_to image_tag("cobitprocessdomains1.png",:size => '400x400', alt: "Cobit Processes"  ), 'http://www.isaca.org/Knowledge-Center/Blog/Lists/Posts/Post.aspx?ID=193' %>		
+		
+		
+		<hr /><p>These 2 areas contain a total of 5 domains and 37 processes:</p>
+
+    <p><strong>Governance of Enterprise IT</strong></p>
+        <p><li>Evaluate, Direct and Monitor (EDM) – 5 processes</li></p>
+        
+    <p><strong>Management of Enterprise IT</strong></p>
+       <li> Align, Plan and Organise (APO) – 13 processes</li>
+       <li> Build, Acquire and Implement (BAI) – 10 processes</li>
+       <li> Deliver, Service and Support (DSS) – 6 processes</li>
+       <li> Monitor, Evaluate and Assess (MEA) - 3 processes</li>
+
+
+</p>
+<p>Lets have a look at the details of the processes and with 37 processes and 200 plus sub processes, there is a lot of it. </p>
+
+
+	<p class="center">
+	<%= link_to 'Business Operations', page_path('Bizops')  %>
+	<%= link_to '', page_path('bizops'), class:"glyphicon glyphicon-chevron-left"  %>
+	<%= link_to '', page_path('cobitprocesses'), class:"glyphicon glyphicon-chevron-right"  %>	
+	<%= link_to 'COBIT Processes', page_path('cobitprocesses')  %>		
+	</p>
+
 			
 
 		
 		
 	
-</div>

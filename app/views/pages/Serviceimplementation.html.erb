@@ -11,7 +11,8 @@
 	
 
 	<p>These pages will take you through a Service Management Review. </p>
-	<p>The process is run in 4 phases and adheres closley to a standard project methodology. We start with a discovery phase where the main output is a <strong>business case.</strong> </p>
+	<p>The process is run in 4 phases and adheres closley to a standard project methodology. We start with a discovery phase where the main output is a <strong>business case</strong> and a
+		<strong>Road Map.</strong>  </p>
 	
 	
 	<p> We then move through a
@@ -57,7 +58,7 @@
 	</p>
 	
 	
-<h4>Business Goals<a name="Business Goals" id="Business Goals"></a></h4>
+<h4>Business Goals - Define the Drivers<a name="Business Goals" id="Business Goals"></a></h4>
 <p>The first step is to compare the current IT services and service levels to business expectations. 
 	If you do not have a set of IT business goals matched to the business plan, then the following will constitute your first set of actions
 	<ul>
@@ -80,14 +81,14 @@
 		
 	</p>
 
-<p>You should now have a set of agreed business goals. </p> 
+<p>Interviews and questionaires are a good approach for the initial information gathering. </p> 
 <p>While you are in discovery (listerning) mode, you should not limit any business requirements. You will prioritise 
 	and cost these requirements in later steps and present them back in the business case for a business decision. 
 	This step is part of creating your <strong>Service Pipeline</strong> and building your <strong>Service Catalogue</strong></p>
 	
 	<%=link_to image_tag("serviceportfolio1.png",:size => '450x320', alt: "service Mgt"  )%>
 
-<h4>IT Baseline</h4>
+<h4>IT Baseline - Where are we now</h4>
 <p>	
 	You need to be able to articulate the current services and service levels provided by the IT department and it's service partners to the business by business lines.
 	It is best to start a draft Services Catelogue to hold the information.</p>
@@ -139,11 +140,14 @@
 
 <p>Your mapping is starting to look like
 		<%=link_to image_tag("servicemapping2.png",:size => '450x320', alt: "service Mgt"  )%></p>	
-
+	 <p>This is similar  to the <%= link_to  'OBASHI', 'http://en.wikipedia.org/wiki/OBASHI'%> framework as you are mapping the Business process, Applications, System, Hardware, and Infrastructure (BASHI). 
+	 	This is also called the Business and IT diagram.</p>
 <p> As you move through this process, you will be building the skeleton of 
 you <%= link_to  ' Configuration Management System (CMDB) ', page_path('serviceCMDB' )%>and of your <%= link_to  'Configuration Items (CIs)', page_path('serviceCI' )%>.
 	<%=link_to image_tag("serviceportfolio2.png",:size => '450x320', alt: "service Mgt"  )%>	
 	 </p>	
+
+	 
 	 
 <p>You then add your KPI's, current service trends and third party contract service levels to the defined services in your draft catalogue. 
 You may have information such as
@@ -192,12 +196,13 @@ This is not a complete list, but it should give you an idea of the information r
 
    
    
-<h3>High Level Gap Analysis</h3>
+<h3>High Level Gap Analysis - Where do we want to be</h3>
 <p> 
-	During this process you will map the current services and the Service Level Objectives to business requirements and expectations and define any gaps.
+	During this process you will map the current services and the Service Level Objectives to business requirements, business pain points and define any gaps.
 	You will estimate the effort and cost to make changes to processes and tools and to train people to remove the gaps.
 	You will use the current draft catelogue, business goals and requirements and issues lists as inputs to the process.
-	This will provide the scope and cost of the Service Improvement Project (SIP) you are intending to run.
+	This will provide the scope and cost of the Service Improvement Project (SIP) you are intending to run. The aim is to provide an answer for the business, you need to avoid 
+	any solutions that are not directly measureable against business goals. Implementing an ITIL process for it's own sake is not a good idea.
 	</p>
 <p>An example spreadsheet below demonstrates the information you need to collate and analyse.</p>
 
@@ -217,7 +222,7 @@ This is not a complete list, but it should give you an idea of the information r
    you can use the  <%= link_to 'Analyze', 'http://www.isixsigma.com/new-to-six-sigma/dmaic/six-sigma-dmaic-roadmap/'  %> processes to achieve a result
    for the more difficult gaps such as reducing fix times or response times.</p>
 
-<h3>Complete the Business Case</h3>
+<h3>Complete the Business Case and Roadmap</h3>
 <p> From the Gap Analysis you should be able to complete the <%= link_to "Business Case Template", pdf_path('Business case template.pdf')  %>.
 You will have to summarise the findings and work with your finance team to present the information in your business's expected format.
 </p>
