@@ -1,4 +1,12 @@
 <% content_for :title do %>Business Management Processes<% end %>
+
+<p class="center">
+	<%= link_to 'Business Operations', page_path('bizops')  %>
+	<%= link_to '', page_path('bizops'), class:"glyphicon glyphicon-chevron-left"  %>
+	<%= link_to '', page_path('bizopsprocess'), class:"glyphicon glyphicon-chevron-right"  %>	
+	<%= link_to 'Business Operations Processes', page_path('bizopsprocess')  %>
+	</p>
+
 <h1><i class="glyphicon glyphicon-info-sign"></i>IT Business Management Processes</h1>
 <p>
 			<%= link_to image_tag("discoversymbol.png", :size => '50x50',alt: "Ops mgt"), page_path('bizops'),class: 'pull-left' %>  

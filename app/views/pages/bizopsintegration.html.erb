@@ -1,4 +1,11 @@
 <% content_for :title do %>Business Management Integration<% end %>
+
+<p class="center">
+	<%= link_to 'Business Operations', page_path('bizops')  %>
+	<%= link_to '', page_path('bizops'), class:"glyphicon glyphicon-chevron-left"  %>
+	<%= link_to '', page_path('bizopsprocess'), class:"glyphicon glyphicon-chevron-right"  %>	
+	<%= link_to 'Business Operations Processes', page_path('bizopsprocess')  %>
+	</p>
 <h1><i class="glyphicon glyphicon-info-sign"></i>IT Business Management Integration</h1>
 <p>
 			<%= link_to image_tag("discoversymbol.png", :size => '50x50',alt: "Ops mgt"), page_path('bizops'),class: 'pull-left' %>  
@@ -21,10 +28,10 @@
 
 <div class="row">
   <div class="col-md-2 "><strong>KIS</strong></div>
-    <div class="col-md-2 "><strong>ITIL</strong></div>
-      <div class="col-md-2 "><strong>PMBOK</strong></div>
-      <div class="col-md-2 "><strong>COBIT</strong></div>
-            <div class="col-md-2 "><strong>Lean Six Sigma</strong></div>
+   <div class="col-md-2 "><strong>ITIL</strong></div>
+   <div class="col-md-2 "><strong>PMBOK</strong></div>
+   <div class="col-md-2 "><strong>COBIT</strong></div>
+   <div class="col-md-2 "><strong>Lean Six Sigma</strong></div>
 </div> <!--row 1 -->
 
 <div class="row">
@@ -63,8 +70,8 @@
   <div class="col-md-2 rowborder">Control</div>   
 </div> <!--row 6 -->
 <hr />
-<p>ITIL is very good at defining and running services but not as strong on the ay the projects should run so using a project management framework like PMBOK fixes that issue nicely. Both are poor at
-	IT governance. You need to extract the ILIL and PMBOK processes you need to govern out of the frameworks and integrate them into your process. COBIT is great at governance and IT processes in general but
+<p>ITIL is very good at defining and running services but not as strong on project processes so using a project management framework like PMBOK fixes that issue nicely. Both are poor at
+	IT governance. You need to extract the ITIL and PMBOK processes you need to govern out of the frameworks and integrate them into your process. COBIT is great at governance and IT processes in general but
 	it is extremely complex and needs a lot of modification to work in small and medium business The Lean Six Sigma approach
 	to business issues and requirements focuses more on analysis/problem solving and time management and is open ended 
 	but the Define, Measure, Analyze, Improve, Control processes are very useful in the first 3 phases of ITIL. 
@@ -97,3 +104,9 @@
 </div>
 	
 <p></p>
+<p class="center">
+	<%= link_to 'Business Operations', page_path('bizops')  %>
+	<%= link_to '', page_path('bizops'), class:"glyphicon glyphicon-chevron-left"  %>
+	<%= link_to '', page_path('bizopsprocess'), class:"glyphicon glyphicon-chevron-right"  %>	
+	<%= link_to 'Business Operations Processes', page_path('bizopsprocess')  %>
+	</p>

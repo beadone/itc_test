@@ -69,7 +69,8 @@
 	<li>Present Goals to Executive Management for review and approval</li>
 	<li>Publish Goals</li>			
 </ul>
-<p>Below is an example of how IT goals are mapped to business goals</p>
+<p>Below is an example of how IT goals are mapped to business goals. This approach is also used by the COBIT framework and first used in the balanced scorecard performance management tool. You
+	will find a lot of examples of how to execute this phase on the internet.</p>
 <p>
 <%=link_to image_tag("goalmapping1.png",:size => '1200x320', alt: "service Mgt"  )%>
 </p>
@@ -81,7 +82,7 @@
 		
 	</p>
 
-<p>Interviews and questionaires are a good approach for the initial information gathering. </p> 
+<p>Interviews and questionaires are a good approach for the initial information gathering. You may use a set of <%= link_to "generic goals ", page_path('cobitgoals')  %>as a check list to make sure you have covered all the ground. </p> 
 <p>While you are in discovery (listerning) mode, you should not limit any business requirements. You will prioritise 
 	and cost these requirements in later steps and present them back in the business case for a business decision. 
 	This step is part of creating your <strong>Service Pipeline</strong> and building your <strong>Service Catalogue</strong></p>
@@ -130,11 +131,14 @@
 </ul>			
 		</p> 
 <p>You will have to balance the need to an create accurate detailed map of the current services with time and cost constraints of completing the business case. 
-	The more detailed you are, the more accurate the gap analysis will be but this will put you at risk of analysis paralysis. </p>
+	The more detailed you are, the more accurate the gap analysis will be but this will put you at risk of analysis paralysis.
+	 </p>
 	<p>You may need the 
-	services of an experienced Service Manager at this point. 
-	 To complete this step and the gap analysis is a difficult task requiring expert knowledge
-	and some well defined templates in order to complete in a resonable time.</p>
+	services of an experienced Service Manager at this point. To complete this step and the gap analysis is a difficult task requiring expert knowledge
+	and some well defined templates in order to complete in a resonable time. For example, the customer wants a single point of contact instead of being handed off for some calls. You
+	may not be sure if you need to put in a knowledge base, improve the maturity of the incident management process, maybe upgrade the service desk software. An expert would get you
+	to an answer without having to get into detailed design at this early stage and reduce the risk of getting the scope wrong.
+	</p>
 <h4>Mapping IT Structures to Services</h4>
 <p>Next you need to map the applications, infrastructure and technical support to the plan. This will show how the physical environment supports the services</p>
 
@@ -206,7 +210,7 @@ This is not a complete list, but it should give you an idea of the information r
 	</p>
 <p>An example spreadsheet below demonstrates the information you need to collate and analyse.</p>
 
-	<%=link_to image_tag("servicesgap1.png",:size => '900x320', alt: "service Mgt" )%>	
+	<%=image_tag("servicesgap1.png",:size => '900x320', alt: "service Mgt" )%>	
 
 
 <p>	
@@ -220,7 +224,9 @@ This is not a complete list, but it should give you an idea of the information r
 <p>You may have to revisit the business stakeholders to confirm some requirements as they maybe high level or not articulated at all.
 	   If you have  <%= link_to 'Lean Six Sigma', 'http://en.wikipedia.org/wiki/Lean_Six_Sigma'  %> experience, 
    you can use the  <%= link_to 'Analyze', 'http://www.isixsigma.com/new-to-six-sigma/dmaic/six-sigma-dmaic-roadmap/'  %> processes to achieve a result
-   for the more difficult gaps such as reducing fix times or response times.</p>
+   for the more difficult gaps such as reducing fix times or response times. Please note that the gap analysis is driven by business goals. You should not carry out work that
+   does not benefit the business. I have seen Service Reviews that are designed to improve the maturity of service processes, but none where tied back to a business benefit. This 
+   approach would spend the companies money but not be agreed to by the business. </p>
 
 <h3>Complete the Business Case and Roadmap</h3>
 <p> From the Gap Analysis you should be able to complete the <%= link_to "Business Case Template", pdf_path('Business case template.pdf')  %>.

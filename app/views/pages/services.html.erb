@@ -72,7 +72,7 @@
 					a simpler, cost effective, tailored approach is required.
 				</p>
 				<p>
-					Checkout our integrated approach.
+					Checkout our <%= link_to 'integrated approach.', page_path('projmgt') %>
 				</p>
 			</div>
 			<!-- padp -->
@@ -87,23 +87,23 @@
 				</p>
 				<p>
 					Like project management, ITIL and COBIT are large bodies of knowledge describing how to run an IT Division. ITSM can get a life of its own as you implement the
-					25 key processes in 5 core volumes of ITIL or COBITs 36 processes and at the end you may not achieve
+					25 key processes in 5 core volumes of ITIL or COBITs 37 processes, 210 activities and 1112 task and at the end you may not achieve
 					<%= link_to 'improvements in IT operations', 'http://www.prnewswire.com/news-releases/compass-itil-cobit-compliance-do-not-equal-process-maturity-134741993.html'%>
 				</p>
 				<p>
-					Click here to
-					read more on a new approach.
+					<%= link_to 'Click here to learn more.', page_path('opsmgt') %>
 				</p>
 			</div>
 			<!-- padp -->
 		</div><!-- column2 -->
 		<div class="col-sm-4">
 			<h4><%= link_to 'IT Business Management', page_path('bizops'),class: 'center' %></h4>
-			<%= link_to image_tag("discoversymbol.png", :size => '50x50',alt: "Rails"), page_path('bizops'),class: 'pull-left' %>
+			<%= link_to image_tag("discoversymbol.png", :size => '50x50',alt: "Business management"), page_path('bizops'),class: 'pull-left' %>
 			<div class="padp">
 				<p>
 					Business Management provides the governance functions for the IT organisation and the management interface to the business.
 				</p>
+				<p>There is only one framework, COBIT, which provides any guidance on the best approach. <%= link_to 'Read more', page_path('bizops') %></p>
 			</div>
 			<!-- padp -->
 		</div><!-- column3 -->
