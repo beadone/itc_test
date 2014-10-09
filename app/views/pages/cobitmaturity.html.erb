@@ -1,8 +1,101 @@
-<% content_for :title do %>COBIT  Maturiy<% end %>
+<% content_for :title do %>Business Process  Maturity<% end %>
 	<p class="center">
-	<%= link_to 'Business Operations', page_path('Bizops')  %>
-	<%= link_to '', page_path('bizops'), class:"glyphicon glyphicon-chevron-left"  %>
-	<%= link_to '', page_path('cobitprocesses'), class:"glyphicon glyphicon-chevron-right"  %>	
-	<%= link_to 'COBIT Processes', page_path('cobitprocesses')  %>		
+	<%= link_to 'COBIT Processes', page_path('cobitprocesses')  %>
+	<%= link_to '', page_path('cobitprocesses'), class:"glyphicon glyphicon-chevron-left"  %>
+	<%= link_to '', page_path('cobitchecklist'), class:"glyphicon glyphicon-chevron-right"  %>	
+	<%= link_to 'Process Checklist', page_path('cobitchecklist')  %>		
 	</p>
-<h1><i class="glyphicon glyphicon-refresh"></i>COBIT  Maturity</h1>
+<h1><i class="glyphicon glyphicon-refresh"></i>Business Process Maturity</h1>
+
+<p>The Capabiliity Maturity Model is a common defined set of capabilities that divide a process into 5 stages of maturity</p>
+
+<%=  image_tag("maturitymodel1.png",:size => '400x400', alt: "capability maturity model"  )%> 
+	<hr />
+<p>This model was first discussed in 1987 and has been refined over the last almost 20 years. You will find slightly different versions of the model on the web but all essentially describe the same 
+	5 stages
+	</p>
+
+
+
+<div class="row">
+	<div class="col-md-2 center">
+		<strong>Stage</strong>
+	</div>
+	<div class="col-md-3  center ">
+		<strong>Description</strong>
+	</div>
+
+</div>
+<!--row 1 -->
+<div class="row">
+	<div class="col-md-2 rowborder">
+		<li>Initial </li>
+	</div>
+	<div class="col-md-6 rowborder">
+		
+			<p>Ad hoc processes run by individuals. Change presents a large risk</p>			
+	</div>
+</div>
+<!--row 2 -->
+
+<div class="row">
+	<div class="col-md-2 rowborder">
+		<li>Managed</li>
+	</div>
+	<div class="col-md-6 rowborder">
+		
+			<p>Repeatable processes that have basic management control. Uses basic management like project management and teams have some discipline. </p>			
+	</div>
+</div>
+<!--row 3 -->
+<div class="row">
+	<div class="col-md-2 rowborder">
+		<li>Defined </li>
+	</div>
+	<div class="col-md-6 rowborder">
+		
+			<p>Documented set of standard processes that are tailored for the organisation. Standard objectives are derived from running these processes. </p>			
+	</div>
+</div>
+<!--row 4 -->
+<div class="row">
+	<div class="col-md-2 rowborder">
+		<li>Quantitatively Managed </li>
+	</div>
+	<div class="col-md-6 rowborder">
+		
+			<p>Process controls are in place and metrics are collected. The process is well understood and predictable. </p>			
+	</div>
+</div>
+<!--row 5 -->
+<div class="row">
+	<div class="col-md-2 rowborder">
+		<li>Optimizing </li>
+	</div>
+	<div class="col-md-6 rowborder">
+		
+			<p>Goal setting and process feedback are in place. Process change and variation is managed against business goals.</p>			
+	</div>
+</div>
+<!--row 6 -->
+<div class="row">
+	<div class="col-md-2 rowborder">
+		
+	</div>
+	<div class="col-md-6 rowborder">
+		
+					
+	</div>
+</div>
+<!--row 6 -->
+
+
+
+	<p class="center">
+	<%= link_to 'COBIT Processes', page_path('cobitprocesses')  %>
+	<%= link_to '', page_path('cobitprocesses'), class:"glyphicon glyphicon-chevron-left"  %>
+	<%= link_to '', page_path('cobitchecklist'), class:"glyphicon glyphicon-chevron-right"  %>	
+	<%= link_to 'Process Checklist', page_path('cobitchecklist')  %>		
+	</p>
+
+
