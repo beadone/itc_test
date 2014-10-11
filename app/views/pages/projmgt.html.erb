@@ -1,4 +1,12 @@
-<% content_for :title do %>Project Management<% end %> <h1><i class="glyphicon glyphicon-check"></i>Project and Program Management</h1>
+<% content_for :title do %>Project Management<% end %> 
+<p class="center">
+	<%= link_to 'Services', page_path('services')  %>
+	<%= link_to '', page_path('services'), class:"glyphicon glyphicon-chevron-left"  %>
+	<%= link_to '', page_path('projmgtinitiation'), class:"glyphicon glyphicon-chevron-right"  %>	
+	<%= link_to 'Project Initiation', page_path('projmgtinitiation')  %>
+	</p>
+<h1><i class="glyphicon glyphicon-check"></i>Project and Program Management</h1>
+
 <p>
 	<%= link_to image_tag("projmgt4.png",:size => '250x120', alt: "Project Mgt"  ), page_path('projmgt'),class: 'pull-left' %>
 	<div class="padp">
@@ -80,6 +88,12 @@
 		<h4> <%= link_to "OpenProject", 'http://pmi.org' %></h4>
 		</p>
 				<hr />
+	<p class="center">
+	<%= link_to 'Services', page_path('services')  %>
+	<%= link_to '', page_path('services'), class:"glyphicon glyphicon-chevron-left"  %>
+	<%= link_to '', page_path('projmgtinitiation'), class:"glyphicon glyphicon-chevron-right"  %>	
+	<%= link_to 'Project Initiation', page_path('projmgtinitiation')  %>
+	</p>
 		<hr />
 		<hr />
 		<p>
