@@ -23,70 +23,160 @@
 			decide what you will use from the available information and what you will not. There a 4 phases in the
 			PMI process with a 5th process to control the project. within each of these process groups there are many processes.
 		</p>
+		
+		
+		<%= image_tag("projmgtphases1.png",:size => '400x400', alt: "Project Mgt"  ) %>
+		
 
-		<div class="opsmgt">
-			<div class="span">
-				<table class="table table-condensed table-hover">
-					<caption>
-						<h3>PMBOK Phases</h3>
-					</caption>
+<div class = "padp center">
+<div class="row">
+	<div class="col-md-2 ">
+		<strong>PMBOK Phases</strong>
+	</div>
 
-					<tbody>
-						<tr>
-							<td><%= link_to 'Initiation', page_path('projmgtinitiation'),class: 'center' %></td>
-						</tr>
-						<tr>
-							<td><%= link_to 'Planning', page_path('projmgtplanning'),class: 'center' %></td>
-						</tr>
-						<tr>
-							<td><%= link_to 'Execution', page_path('projmgtexecution'),class: 'center' %></td>
-						</tr>
-						<tr>
-							<td><%= link_to 'Close Down', page_path('projmgtclosedown'),class: 'center' %></td>
-						</tr>
-					</tbody>
+</div>
+<!--row 1 -->
+<div class="row">
+	<div class="col-md-2 rowborder">
+		<%= link_to 'Initiation', page_path('projmgtinitiation'),class: 'center' %>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-2 rowborder">
+		<%= link_to 'Planning', page_path('projmgtplanning'),class: 'center' %>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-2 rowborder">
+		<%= link_to 'Execution', page_path('projmgtexecution'),class: 'center' %>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-2 rowborder">
+		<%= link_to 'Close Down', page_path('projmgtclosedown'),class: 'center' %>
+	</div>
+</div>
+</div>
+<div class="row">
+	<div class="col-md-2 rowborder">
+	</div>
+</div>
+</div>
 
-				</table>
-				<!-- stripped table -->
-			</div>
-		</div>
-
-		<p>
-			The 5th process is the Controlling and Monitoring Process which describes how to run the 4 phases of a project.
-		</p>
-		<%= link_to image_tag("pmpoverview1.png",:size => '450x320', alt: "Project Mgt"  ), 'http://pmi.org'%>
-
-		<hr />
-		<hr />
 
 
-<h4>The Ten Project Knowledge Areas are:</h4>		
+<hr />
+<p>The PMBOK defines 10 knowledge areas which are used during the project phases. Each knowledge area has defined processes that run in one of the 4 phases.
+You can see the planning phase runs the most different number of processes.</p>
+<hr />
 
-		<p>
-		Project Integration Management : Project Integration Management includes the processes and activities needed to identify, define, combine, unify, and coordinate the various processes and project management activities within the Project Management Process Groups.
-		</p><p>
-		Project Scope Management : Project Scope Management includes the processes required to ensure that the project includes all the work required, and only the work required, to complete the project successfully.
-		</p><p>
-		Project Time Management : Project Time Management includes the processes required to manage the timely completion of the project.
-		</p><p>
-		Project Cost Management : Project Cost Management includes the processes involved in planning, estimating, budgeting, financing, funding, managing, and controlling costs so that the project can be completed within the approved budget.
-		</p><p>
-		Project Quality Management : Project Quality Management includes the processes and activities of the performing organization that determine quality policies, objectives, and responsibilities so that the project will satisfy the needs for which it was undertaken.
-		</p><p>
-		Project Human Resource Management : Project Human Resource Management includes the processes that organize, manage, and lead the project team.
-		</p><p>
-		Project Communications Management : Project Communications Management includes the processes that are required to ensure timely and appropriate planning, collection, creation, distribution, storage, retrieval, management, control, monitoring, and the ultimate disposition of project information.
-		</p><p>
-		Project Risk Management : Project Risk Management includes the processes of conducting risk management planning, identification, analysis, response planning, and controlling risk on a project.
-		</p><p>
-		Project Procurement Management : Project Procurement Management includes the processes necessary to purchase or acquire products, services, or results needed from outside the project team
-		</p><p>
-		Project Stakeholders Management : Project Stakeholder Management includes the processes required to identify all people or organizations impacted by the project, analyzing stakeholder expectations and impact on the project, and developing appropriate management strategies for effectively engaging stakeholders in project decisions and execution.
-		</p><p>
 
-		<%= link_to image_tag("cogs2 glossy background4 cube.png",:size => '50x50', alt: "Project Mgt"  ), 'http://openproject.org',class: 'pull-left' %>
-		<h4> <%= link_to "OpenProject", 'http://pmi.org' %></h4>
-		</p>
+<div class = "padp center">
+<div class="row">
+	<div class="col-md-2 ">
+		<strong>Knowledge Areas</strong>
+	</div>
+	<div class="col-md-6 ">
+		<strong>Description</strong>
+	</div>
+</div>
+<!--row 1 -->
+<div class="row">
+	<div class="col-md-2 rowborder">
+		Project Integration Management
+	</div>
+		<div class="col-md-6 rowborder">
+		Project Integration Management includes the processes and activities needed to identify, 
+		define, combine, unify, and coordinate the various processes and project management activities within the Project Management Process Groups.
+		
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-2 rowborder">
+		Project Scope Management
+	</div>
+		<div class="col-md-6 rowborder">
+		Project Scope Management includes the processes required to ensure that the project includes all the work required, and only the work required, to complete the project successfully.
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-2 rowborder">
+		Project Time Management
+	</div>
+		<div class="col-md-6 rowborder">
+		 Project Time Management includes the processes required to manage the timely completion of the project.
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-2 rowborder">
+		Project Cost Management
+	</div>
+		<div class="col-md-6 rowborder">
+		  includes the processes involved in planning, estimating, budgeting, financing, funding, managing, and controlling costs so that the project can be completed within the approved budget.
+
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-2 rowborder">
+		Project Quality Management
+	</div>
+		<div class="col-md-6 rowborder">
+		  Project Quality Management includes the processes and activities of the performing organization that determine quality policies, objectives, and responsibilities so that the project will satisfy the needs for which it was undertaken.
+
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-2 rowborder">
+		Project Human Resource Management
+	</div>
+		<div class="col-md-6 rowborder">
+		 Project Human Resource Management includes the processes that organize, manage, and lead the project team.
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-2 rowborder">
+		Project Communications Management
+	</div>
+		<div class="col-md-6 rowborder">
+		  Project Communications Management includes the processes that are required to ensure timely and appropriate planning, collection, creation, distribution, storage, retrieval, management, control, monitoring, and the ultimate disposition of project information.
+
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-2 rowborder">
+		Project Risk Management
+	</div>
+		<div class="col-md-6 rowborder">
+		  Project Risk Management includes the processes of conducting risk management planning, identification, analysis, response planning, and controlling risk on a project.
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-2 rowborder">
+		Project Procurement Management
+	</div>
+		<div class="col-md-6 rowborder">
+		  Project Procurement Management includes the processes necessary to purchase or acquire products, services, or results needed from outside the project team
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-2 rowborder">
+		Project Stakeholders Management
+	</div>
+		<div class="col-md-6 rowborder">
+		  Project Stakeholder Management includes the processes required to identify all people or organizations impacted by the project, analyzing stakeholder expectations and impact on the project, and developing appropriate management strategies for effectively engaging stakeholders in project decisions and execution.
+
+	</div>
+</div>
+
+</div>
+<hr /><hr />
+
+<p class="padp">
+Below is the high level view of the processes ordered by the Knowledge Areas and by the Project Phases
+</p>
+<%= image_tag("projmgtprocesses1.png",:size => '800x800', alt: "Project Mgt"  ) %>
+
+
 				<hr />
 	<p class="center">
 	<%= link_to 'Services', page_path('services')  %>
@@ -94,20 +184,5 @@
 	<%= link_to '', page_path('projmgtinitiation'), class:"glyphicon glyphicon-chevron-right"  %>	
 	<%= link_to 'Project Initiation', page_path('projmgtinitiation')  %>
 	</p>
-		<hr />
-		<hr />
-		<p>
-			Subscribe to our monthly newsletter
-		</p>
 
-
-		<div class="control-group">
-			<label class="control-label" for="inputIcon">Email address</label>
-			<div class="controls">
-				<div class="input-prepend">
-					<span class="add-on"><i class="glyphicon glyphicon-envelope"></i></span>
-					<input class="span2" id="inputIcon" type="text">
-				</div>
-			</div>
-		</div>
 		<hr>
