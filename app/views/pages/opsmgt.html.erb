@@ -1,5 +1,5 @@
 <% content_for :title do %>Service Management<% end %> 
-<p class="left">
+<p class="center">
 	<%= link_to '', page_path('Serviceimplementation'), class:"glyphicon glyphicon-chevron-right"  %>	
 	<%= link_to 'Service Implementation', page_path('Serviceimplementation')  %>		
 	</p>
@@ -23,7 +23,7 @@
 	
 	<h3>Moving to a Service Management Culture and Process?</h3>
 	<p>
-		The CEO wants to see a change to a service based culture in IT but without any or little additional cost. How do you achieve this ?
+		You want to change to a service based culture in IT but without any or little additional cost. How do you achieve this ?
 		The last time you looked at the 	<%= link_to  'ITIL', 'http://www.itil-officialsite.com/'%> based Service Management Process, it was over 500 pages of change.
 		
 		
@@ -77,7 +77,7 @@
 	</ul>
 	
 	 
-	Defined by a business case to gain the first level of benefits of good service management espoused by ITIL aficionados.
+	Use a defined business case to gain the first level of benefits of good service management espoused by ITIL aficionados.
 </p>
 
 <p>
@@ -189,11 +189,9 @@
 <p>Below is an example of a generic high level Service Management Implementation Plan. It is very high level and does not contain the interdependencies. I.e. you need to define and 
 	document the services and processes before you can complete the configuration of the tool and train the teams. You will most likely use a staged approach focusing on the major services first
 	that gives the most benefit to the business as defined in a business case.</p>
-
-<p>	It will run like any other project and you are encouraged to follow standard project management processes.
-	Follow the <%= link_to 'link', page_path('Serviceimplementation') %> to find out the next level of detail. 
-
 <%= link_to image_tag("SeviceImp1.png",:size => '450x600', alt: "Service Management"  ), page_path('Serviceimplementation'),class: 'pull-left' %>
+<p class = 'padp'>	It will run like any other project and you are encouraged to follow standard project management processes.
+	Follow the <%= link_to 'link', page_path('Serviceimplementation') %> to find out the next level of detail. 
 
 </p>	
 	

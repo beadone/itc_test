@@ -1,4 +1,14 @@
 <% content_for :title do %>Project Management<% end %> 
+		
+<script type="text/javascript" src="jquery.min.js"></script>
+   <script type="text/javascript" src="jquery.maphilight.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.map').maphilight();
+        });
+    </script>
+
+
 <p class="center">
 	<%= link_to 'Services', page_path('services')  %>
 	<%= link_to '', page_path('services'), class:"glyphicon glyphicon-chevron-left"  %>
@@ -25,43 +35,24 @@
 		</p>
 		
 		
-		<%= image_tag("projmgtphases1.png",:size => '400x400', alt: "Project Mgt"  ) %>
+		<%= image_tag("projmgtphases646x404.png", :size => '646x404' , alt: "Project Mgt", :usemap => "#projmap1", :class => 'map'  ) %>
 		
 
-<div class = "padp center">
-<div class="row">
-	<div class="col-md-2 ">
-		<strong>PMBOK Phases</strong>
-	</div>
 
-</div>
-<!--row 1 -->
-<div class="row">
-	<div class="col-md-2 rowborder">
-		<%= link_to 'Initiation', page_path('projmgtinitiation'),class: 'center' %>
-	</div>
-</div>
-<div class="row">
-	<div class="col-md-2 rowborder">
-		<%= link_to 'Planning', page_path('projmgtplanning'),class: 'center' %>
-	</div>
-</div>
-<div class="row">
-	<div class="col-md-2 rowborder">
-		<%= link_to 'Execution', page_path('projmgtexecution'),class: 'center' %>
-	</div>
-</div>
-<div class="row">
-	<div class="col-md-2 rowborder">
-		<%= link_to 'Close Down', page_path('projmgtclosedown'),class: 'center' %>
-	</div>
-</div>
-</div>
-<div class="row">
-	<div class="col-md-2 rowborder">
-	</div>
-</div>
-</div>
+<map name="projmap1">
+<!-- #$-:Image map file created by GIMP Image Map plug-in -->
+<!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
+<!-- #$-:Please do not edit lines starting with "#$" -->
+<!-- #$VERSION:2.3 -->
+<!-- #$AUTHOR:Brendan -->
+<area shape="rect" coords="129,57,476,103" alt="Initiation" href="/pages/projmgtinitiation" />
+<area shape="rect" coords="129,114,476,159" alt="Project Planning" href="/pages/projmgtplanning" />
+<area shape="rect" coords="129,170,476,215" alt="Project Execution" href="/pages/projmgtexecution" />
+<area shape="rect" coords="129,224,476,269" alt="Project Close Down" href="/pages/projmgtclosedown" />
+<area shape="rect" coords="129,279,476,323" alt="Project Monitor and Control" href="/pages/projmgtm&amp;c" />
+</map>
+
+
 
 
 
@@ -186,3 +177,7 @@ Below is the high level view of the processes ordered by the Knowledge Areas and
 	</p>
 
 		<hr>
+		
+
+		
+		
